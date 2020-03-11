@@ -1,0 +1,66 @@
+﻿@model CarStore.Models.Config
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Config</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.CarModelId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarModelId)
+        </dd>*@
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Transmission)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Transmission)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EngineType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EngineType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EngineVolume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EngineVolume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WheelSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WheelSize)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
