@@ -2,10 +2,22 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Home Page";
 }
-<body>
-    <div>
-        <h2><br>Welcome to 'RS' auto shop</h2>
+    <body>
+        <div>
+            <h2><br>Welcome to 'RS' auto shop</h2>
+            <a class="btn-primary" href="/Purchase/Create">Create PURCHASE</a>    
+            <br>
+            <center>
+                <a href="/Home/About"><img src="~/App_Images/LogoImg.png" alt="Logo_img" class="logo" /></a>
+            </center>
+        </div>
         <br>
-        <img src="~/App_Images/LogoImg.png" alt="Logo" class="logo" />
-    </div>
+        <center>
+            <h2>_BRANDS_</h2>
+        </center>
+                <br>
+                <div>
+                    <h4 class="btn-link"><a href="/Brand/Index/1"><img src="~/App_Images/RenaulLogo.jpg" alt="Renault_img" /></a></h4>
+                </div>
+        <br>
 </body>
