@@ -12,24 +12,24 @@ namespace CarStore.Controllers
     {
         CarStoreContext db = new CarStoreContext();
         
-        public ActionResult Index()
+        public ActionResult Index(int? id)
         {
-            //var result = new List<Brand>();
-            //if (id == null)
-            //{
+            var result = new List<Brand>();
+            if (id == null)
+            {
                 return View(db.Brands.ToList());
-            //}
-            //else 
-            //{
-            //    foreach (var b in db.Brands) 
-            //    {
-            //        if (b.Id == id) 
-            //        {
-            //            result.Add(b);
-            //        }
-            //    }
-            //    return View(result.ToList());
-            //}
+            }
+            else
+            {
+                foreach (var b in db.Brands)
+                {
+                    if (b.Id == id)
+                    {
+                        result.Add(b);
+                    }
+                }
+                return View(result.ToList());
+            }
         }
 
         public ActionResult Details(int? id) 

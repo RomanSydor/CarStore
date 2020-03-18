@@ -154,12 +154,17 @@
     <Content Include="App_Data\CarStoreDb_log.ldf">
       <DependentUpon>CarStoreDb.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Images\font.jpg" />
     <Content Include="App_Images\LogoImg.png" />
-    <Content Include="App_Images\RenaulLogo.jpg" />
+    <Content Include="App_Images\Renault-logo.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ViewsCSS\BrandIndex.css" />
+    <Content Include="Content\ViewsCSS\CarModelIndex.css" />
+    <Content Include="Content\ViewsCSS\HomeIndex.css" />
+    <Content Include="Content\ViewsCSS\_Layout.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

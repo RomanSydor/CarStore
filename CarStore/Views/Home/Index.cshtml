@@ -2,22 +2,39 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Home Page";
 }
-    <body>
+
+    <head>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        <meta name="viewport" content="width=device-width" />
+        <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+        <link type="text/css" rel="stylesheet" href="../../Content/ViewsCSS/HomeIndex.css" />
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Barlow+Condensed:400,700|Open+Sans:400,700|Oswald:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    </head>
+
+
+    <body class="container-intro">
+        
+        <div class="content">
+            <div>
+                <div class="intro-div">
+                    Welcome to "RS-store"
+                </div>
+                <div class="description-div">
+                    <br>Here you can find a wide range of different cars.<br>And choose the one that suits you.
+                </div>
+            </div>
+
+            <div class="img-div">
+                <img src="~/App_Images/LogoImg.png" alt="Logo_img" class="logo-img" />
+            </div>
+        </div>               
+        <br>
+            <h1>Brands info pages</h1>
+        <br>
         <div>
-            <h2><br>Welcome to 'RS' auto shop</h2>
-            <a class="btn-primary" href="/Purchase/Create">Create PURCHASE</a>    
-            <br>
-            <center>
-                <a href="/Home/About"><img src="~/App_Images/LogoImg.png" alt="Logo_img" class="logo" /></a>
-            </center>
+            <a href="/Brand/Details/1"><img src="~/App_Images/Renault-logo.png" alt="Renault_img" /></a>
+            <a href="/Brand/Details/2" class="audi-img"><img src="#" alt="Audi-img" /></a>
         </div>
         <br>
-        <center>
-            <h2>_BRANDS_</h2>
-        </center>
-                <br>
-                <div>
-                    <h4 class="btn-link"><a href="/Brand/Index/1"><img src="~/App_Images/RenaulLogo.jpg" alt="Renault_img" /></a></h4>
-                </div>
-        <br>
-</body>
+    </body>
