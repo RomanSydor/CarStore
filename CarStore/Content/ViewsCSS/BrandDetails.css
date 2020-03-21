@@ -1,0 +1,26 @@
+﻿.small-icon {
+    height: 120px;
+    width: 130px;
+}
+
+.detils-img-div {
+    background-color: white;
+    opacity: 0.8;
+    display: inline-block;
+    height: 130px;
+    width: 140px;
+    text-align: center;
+}
+
+.about {
+    position: center;
+    font-size: 25px;
+    line-height: 2;
+    background: #ffffff;
+    opacity: 0.8;
+    color: #000000;
+    height: auto;
+    width: 1300px;
+    margin-left: 50px;
+    padding-left: 15px;
+}

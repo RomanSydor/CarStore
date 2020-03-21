@@ -15,36 +15,33 @@
 
     </head>
 
-    <body class="body">
+    <body>
         <h1>Models</h1>
         <hr />
-        <table class="tab">
-            @*<tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.BrandId)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>
-                <th></th>
-            </tr>*@
-
+        <table class="table-bm">
             @foreach (var item in Model)
             {
-                <tr>
-                    @*<td>
-                        @Html.DisplayFor(modelItem => item.BrandId)
-                    </td>*@
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
+                <tr class="tr-bm">
+                    <td class="td-bm">
+                        @if (item.Id == 1)
+                        {
+                            <img class="small-icon" src="~/App_Images/megane-small-icon.jpg" alt="Megane-small-icon" />
+                        }
+                        @if (item.Id == 2)
+                        {
+                            <img class="small-icon" src="~/App_Images/duster-small-icon.jpg" alt="Megane-small-icon" />
+                        }
+                        <span>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </span>
                     </td>
-                    <td>
+                    <td class="td-bm">
                         @Html.ActionLink("Details", "Details", new { id = item.Id })
                     </td>
-                    <td>
+                    <td class="td-bm">
                         <a href="/CarColor/Index">Color</a>
                     </td>
-                    <td>
+                    <td class="td-bm">
                         <a href="/Config/Index/@item.Id">Configuration</a>
                     </td>
                 </tr>

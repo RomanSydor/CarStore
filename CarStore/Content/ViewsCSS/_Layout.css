@@ -44,11 +44,24 @@
     display: inline-block;
     vertical-align: top;
     margin: 0 15px;
-    color: #a9eeff;
+    color: #ffffff;
     transition: color .2s linear;
 }
 
     .nav-link:hover {
+        color: #00b7ff;
+    }
+
+.nav-link-car {
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    color: #a9eeff;
+    transition: color .2s linear;
+}
+
+    .nav-link-car:hover {
         color: #00b7ff;
     }
 

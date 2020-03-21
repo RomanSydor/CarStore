@@ -1,6 +1,4 @@
-﻿/* Intro page */
- 
-/* Img */
+﻿/* Img */
 .img-div {
    padding-top: 70px;
 }
@@ -49,13 +47,17 @@ h1 {
 }
 
 img {
-    height: 200px;
-    width: 150px;
     display: inline-block;
-    vertical-align: top;
-    margin: 0 100px;
+    vertical-align:central;
+    margin: 0 80px;
+}
+
+.renault-img {
+    height: 250px;
+    width: 250px;
 }
 
 .audi-img{
-    margin-left: 100px;
+    height: 400px;
+    width: 400px;
 }

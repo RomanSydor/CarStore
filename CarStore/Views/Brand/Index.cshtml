@@ -14,34 +14,31 @@
         <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Barlow+Condensed:400,700|Open+Sans:400,700|Oswald:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
     </head>
 
-    <body class="body">
+    <body>
         <h1>Brand</h1>
         <hr />
-        <table>
-            @*<tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>
-                <th></th>
-                <th></th>
-            </tr>*@
-
+        <table class="table-bm">
             @foreach (var item in Model)
             {
-                <tr>
-                    <td>
-                        @if (item.Id == 1) 
+                <tr class="tr-bm">
+                    <td class="td-bm">
+                        @if (item.Id == 1)
                         {
-                        <img src="~/App_Images/Renault-logo.png" alt="Renault-icon" class="small-icon"/>
+                            <img class="small-icon" src="~/App_Images/renault-logo.jpg" alt="Renault-icon"/>
+                        }
+                        @if (item.Id == 2)
+                        {
+                            <img class="small-icon" src="~/App_Images/audi-logo.png" alt="Audi-icon"/>
                         }
                         @Html.DisplayFor(modelItem => item.Name)
                     </td>
-                    <td>
+                    <td class="td-bm">
                         @Html.ActionLink("Details", "Details", new { id = item.Id })
                     </td>
-                    <td>
+                    <td class="td-bm">
                         <a href="/CarModel/Index/@item.Id">View cars</a>
                     </td>
+
                 </tr>
             }
 
