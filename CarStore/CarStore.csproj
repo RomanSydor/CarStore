@@ -159,7 +159,13 @@
     <Content Include="App_Images\font.jpg" />
     <Content Include="App_Images\MainLogo.png" />
     <Content Include="App_Images\megane-small-icon.jpg" />
+    <Content Include="App_Images\renault-duster-inside-1.jpg" />
+    <Content Include="App_Images\renault-duster-inside-2.jpg" />
+    <Content Include="App_Images\renault-duster-view.jpg" />
     <Content Include="App_Images\renault-logo.jpg" />
+    <Content Include="App_Images\renault-megane-inside-1.jpg" />
+    <Content Include="App_Images\renault-megane-inside-2.jpg" />
+    <Content Include="App_Images\renault-megane-view.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />

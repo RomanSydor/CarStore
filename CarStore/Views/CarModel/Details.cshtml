@@ -22,9 +22,32 @@
         <div>
             <hr />
             <h2>@Model.Name</h2>
-            
+
+            <span>
+                Start price from $14 200
+                <br />
+            </span>
+
+            <img src="~/App_Images/renault-megane-view.jpg" alt="Megan view" />
 
         </div>
+        <hr />
+        <div>
+            <h2>Interior design</h2>
+            <img src="~/App_Images/renault-megane-inside-1.jpg" alt="Megane inside 1" />
+            <hr />
+            <span>
+                Appreciate its impeccable finish
+                <br>
+                Digital speedometer, ergonomic center console, large 8.7-inch comfortable vertical touch screen * and more. In the interior of the new Renault MEGANE Sedan you are at the center of the event.
+                <br>
+                * Depending on version
+                <br>
+            </span>
+            <hr />
+            <img src="~/App_Images/renault-megane-inside-2.jpg" alt="Megane inside 2" />
+        </div>
+
         <p>
             <a class="back-link" href="/CarModel/Index/1">Back to list</a>
         </p>
@@ -34,49 +57,50 @@
 
 @if (Model.Id == 2)
 {
-    <body>
+<body>
+    <h1>Details</h1>
+    <div>
+        <hr />
+        <h2>@Model.Name</h2>
 
-        <h1>Details (Duster)</h1>
+        <span>
+            Start price from $12 400
+            <br />
+        </span>
 
-        <div>
-            <hr />
-            <dl>
+        <img src="~/App_Images/renault-duster-view.jpg" alt="Duster view" />
 
-                <dt>
-                    @Html.DisplayNameFor(model => model.Name):
-                </dt>
+    </div>
+    <hr />
+    <div>
+        <h2>Interior design</h2>
+        <img src="~/App_Images/renault-duster-inside-2.jpg" alt="Duster inside 1" />
+        <hr />
+        <span>
+            The dynamic design of the all-new Duster will simply astound you.
+            <br>
+            All this thanks to a completely updated body, stylish rails and a grille.
+            <br>
+        </span>
+        <hr />
+        <img src="~/App_Images/renault-duster-inside-1.jpg" alt="Duster inside 2" />
+    </div>
 
-                <dd>
-                    @Html.DisplayFor(model => model.Name)
-                </dd>
-
-            </dl>
-        </div>
-        <p>
-            <a class="back-link" href="/CarModel/Index/1">Back to list</a>
-        </p>
-    </body>
+    <p>
+        <a class="back-link" href="/CarModel/Index/1">Back to list</a>
+    </p>
+</body>
 }
 
 @if (Model.Id == 3)
 {
     <body>
 
-        <h1>Details(RS7)</h1>
+        <h1>Details</h1>
 
         <div>
             <hr />
-            <dl>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.Name):
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.Name)
-                </dd>
-
-            </dl>
+            <h2>@Model.Name</h2>
         </div>
         <p>
             <a class="back-link" href="/CarModel/Index/2">Back to list</a>
@@ -88,21 +112,11 @@
 {
     <body>
 
-        <h1>Details(Q7)</h1>
+        <h1>Details</h1>
 
         <div>
             <hr />
-            <dl>
-
-                <dt>
-                    @Html.DisplayNameFor(model => model.Name):
-                </dt>
-
-                <dd>
-                    @Html.DisplayFor(model => model.Name)
-                </dd>
-
-            </dl>
+            <h2>@Model.Name</h2>
         </div>
         <p>
             <a class="back-link" href="/CarModel/Index/2">Back to list</a>

@@ -22,18 +22,18 @@
             {
                 <tr class="tr-bm">
                     <td class="td-bm">
-                        @if (item.Id == 1)
-                        {
-                            <img class="small-icon" src="~/App_Images/renault-logo.jpg" alt="Renault-icon"/>
-                        }
-                        @if (item.Id == 2)
-                        {
-                            <img class="small-icon" src="~/App_Images/audi-logo.png" alt="Audi-icon"/>
-                        }
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td class="td-bm">
-                        @Html.ActionLink("Details", "Details", new { id = item.Id })
+                        <a href="/Brand/Details/@item.Id">
+                            
+                            @if (item.Id == 1)
+                            {
+                                <img class="small-icon" src="~/App_Images/renault-logo.jpg" alt="Renault-icon" />
+                            }
+                            @if (item.Id == 2)
+                            {
+                                <img class="small-icon" src="~/App_Images/audi-logo.png" alt="Audi-icon" />
+                            }
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </a>
                     </td>
                     <td class="td-bm">
                         <a href="/CarModel/Index/@item.Id">View cars</a>

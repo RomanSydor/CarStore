@@ -46,10 +46,10 @@ textarea {
 .table-bm {
     width: 100%;
     height: auto;
-    text-align: left;
+    text-align: center;
     vertical-align: middle;
     background-color: #000000;
-    opacity: 0.65;
+    opacity: 1;
     margin-top: 50px;
     margin-bottom: 25vh;
     border-top: 1px solid #ffffff;
@@ -57,7 +57,6 @@ textarea {
 
 .td-bm {
     font-size: 30px; 
-    padding-left: 40px;
 }
 
 .tr-bm {
@@ -72,7 +71,7 @@ textarea {
     text-align: left;
     vertical-align: middle;
     background-color: #000000;
-    opacity: 0.65;
+    opacity: 1;
     margin-top: 50px;
     margin-bottom: 25vh;
     border-top: 1px solid #ffffff;
@@ -90,6 +89,7 @@ textarea {
 .th-cc {
     color: #aae6fe;
     font-size: 20px;
+    text-align: center;
 }
 
 /* Header */
