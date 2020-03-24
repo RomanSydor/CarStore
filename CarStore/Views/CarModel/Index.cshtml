@@ -18,11 +18,11 @@
     <body>
         <h1>Models</h1>
         <hr />
-        <table class="table-bm">
+        <table class="table-model">
             @foreach (var item in Model)
             {
-                <tr class="tr-bm">
-                    <td class="td-bm">
+                <tr class="tr-model">
+                    <td class="td-model">
                         <a href="/CarModel/Details/@item.Id">
                             @if (item.Id == 1)
                             {
@@ -37,10 +37,10 @@
                             </span>
                         </a>
                     </td>
-                    <td class="td-bm">
+                    <td class="td-model">
                         <a href="/CarColor/Index">Color</a>
                     </td>
-                    <td class="td-bm">
+                    <td class="td-model">
                         <a href="/Config/Index/@item.Id">Configuration</a>
                     </td>
                 </tr>

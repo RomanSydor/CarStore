@@ -4,6 +4,24 @@
     width: 180px; 
 }
 
-span{
+/* brand and models */
+.table-model {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    vertical-align: middle;
+    text-align: left;
+    background-color: #000000;
+    opacity: 1;
+    margin-top: 50px;
+    margin-bottom: 25vh;
+    border-top: 1px solid #ffffff;
+}
 
+.td-model {
+    font-size: 30px;
+}
+
+.tr-model {
+    border-bottom: 1px solid #ffffff;
 }

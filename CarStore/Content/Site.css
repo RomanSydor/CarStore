@@ -42,27 +42,6 @@ textarea {
 
 /*Tabel*/
 
-/* brand and models */
-.table-bm {
-    width: 100%;
-    height: auto;
-    text-align: center;
-    vertical-align: middle;
-    background-color: #000000;
-    opacity: 1;
-    margin-top: 50px;
-    margin-bottom: 25vh;
-    border-top: 1px solid #ffffff;
-}
-
-.td-bm {
-    font-size: 30px; 
-}
-
-.tr-bm {
-    border-bottom: 1px solid #ffffff;
-}
-
 /* color and configs */
 
 .table-cc {

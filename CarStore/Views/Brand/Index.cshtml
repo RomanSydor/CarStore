@@ -17,11 +17,11 @@
     <body>
         <h1>Brand</h1>
         <hr />
-        <table class="table-bm">
+        <table class="table-brand">
             @foreach (var item in Model)
             {
-                <tr class="tr-bm">
-                    <td class="td-bm">
+                <tr class="tr-brand">
+                    <td class="td-brand">
                         <a href="/Brand/Details/@item.Id">
                             
                             @if (item.Id == 1)
@@ -32,10 +32,9 @@
                             {
                                 <img class="small-icon" src="~/App_Images/audi-logo.png" alt="Audi-icon" />
                             }
-                            @Html.DisplayFor(modelItem => item.Name)
                         </a>
                     </td>
-                    <td class="td-bm">
+                    <td class="td-brand">
                         <a href="/CarModel/Index/@item.Id">View cars</a>
                     </td>
 
