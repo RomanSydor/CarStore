@@ -1,4 +1,5 @@
 ﻿using CarStore.Models;
+using CarStore.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -11,19 +12,17 @@ namespace CarStore.Controllers
 {
     public class PurchaseController : Controller
     {
-        private CarStoreContext db = new CarStoreContext();
-        // GET: Purchase
+
+        IPurchaseRepository repo;
+
+        public PurchaseController(IPurchaseRepository r) 
+        {
+            repo = r;
+        }
+
         public ActionResult Index()
         {
-           // Purchase result = null;
-
-            //if (result.Id == id)
-            //{
-            //    result = db.Purchases.FirstOrDefault(p => p.Id == id);
-                
-            //}
-            return View(db.Purchases.ToList());
-
+            return View(repo.Index());
         }
 
         // GET: Purchase/Details/5
@@ -33,12 +32,12 @@ namespace CarStore.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Purchase purchase = db.Purchases.Find(id);
-            if (purchase == null)
+            
+            if (repo.Details(id) == null)
             {
                 return HttpNotFound();
             }
-            return View(purchase);
+            return View(repo.Details(id));
         }
 
         public ActionResult Create()
@@ -52,9 +51,7 @@ namespace CarStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                purchase.Date = DateTime.Now;
-                db.Purchases.Add(purchase);
-                db.SaveChanges();
+                repo.Create(purchase);
                 return RedirectToAction("Index");
             }
 
@@ -67,12 +64,12 @@ namespace CarStore.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Purchase purchase = db.Purchases.Find(id);
-            if (purchase == null)
+            
+            if (repo.Edit(id) == null)
             {
                 return HttpNotFound();
             }
-            return View(purchase);
+            return View(repo.Edit(id));
         }
 
         [HttpPost]
@@ -81,9 +78,7 @@ namespace CarStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                purchase.Date = DateTime.Now;
-                db.Entry(purchase).State = EntityState.Modified;
-                db.SaveChanges();
+                repo.Edit(purchase);
                 return RedirectToAction("Index");
             }
             return View(purchase);
@@ -95,12 +90,12 @@ namespace CarStore.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Purchase purchase = db.Purchases.Find(id);
-            if (purchase == null)
-            {
+            
+            if (repo.Delete(id) == null)
+            { 
                 return HttpNotFound();
             }
-            return View(purchase);
+            return View(repo.Delete(id));
         }
 
         // POST: Purchases/Delete/5
@@ -108,9 +103,7 @@ namespace CarStore.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Purchase purchase = db.Purchases.Find(id);
-            db.Purchases.Remove(purchase);
-            db.SaveChanges();
+            repo.DeleteConfirmed(id);
             return RedirectToAction("Index");
         }
 

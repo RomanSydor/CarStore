@@ -1,33 +1,35 @@
-﻿using CarStore.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using CarStore.Repositories;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 
 namespace CarStore.Controllers
 {
     public class CarColorController : Controller
     {
-        CarStoreContext db = new CarStoreContext();
-        public ActionResult Index()
+        ICarColorRepository repo;
+
+        public CarColorController(ICarColorRepository r)
         {
-            return View(db.CarColors.ToList());
+            repo = r;
         }
 
-        public ActionResult Details(int? id) 
+        public ActionResult Index()
+        {
+            return View(repo.Index());
+        }
+
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            CarColor carColor = db.CarColors.Find(id);
-            if(carColor == null) 
+
+            if (repo.Details(id) == null)
             {
                 return HttpNotFound();
             }
-            return View(carColor);
+            return View(repo.Details(id));
         }
     }
 }
