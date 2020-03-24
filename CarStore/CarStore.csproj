@@ -160,6 +160,8 @@
     <Compile Include="Models\Config.cs" />
     <Compile Include="Models\Purchase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BrandRepository.cs" />
+    <Compile Include="Repositories\IBrandRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\CarStoreDb.mdf" />

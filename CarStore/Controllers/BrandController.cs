@@ -1,49 +1,35 @@
-﻿using CarStore.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using CarStore.Repositories;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 
 namespace CarStore.Controllers
 {
     public class BrandController : Controller
     {
-        CarStoreContext db = new CarStoreContext();
-        
-        public ActionResult Index(int? id)
+        IBrandRepository repo;
+
+        public BrandController(IBrandRepository r)
         {
-            var result = new List<Brand>();
-            if (id == null)
-            {
-                return View(db.Brands.ToList());
-            }
-            else
-            {
-                foreach (var b in db.Brands)
-                {
-                    if (b.Id == id)
-                    {
-                        result.Add(b);
-                    }
-                }
-                return View(result.ToList());
-            }
+            repo = r;
         }
 
-        public ActionResult Details(int? id) 
+        public ActionResult Index(int? id)
+        {
+            return View(repo.Index(id));
+        }
+
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Brand brand = db.Brands.Find(id);
-            if (brand == null)
+            if (repo.Details(id) == null)
             {
                 return HttpNotFound();
             }
-            return View(brand);
+
+            return View(repo.Details(id));
         }
     }
 }
