@@ -14,23 +14,27 @@
     <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Barlow+Condensed:400,700|Open+Sans:400,700|Oswald:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
 </head>
 
-@if (Model.Id == 1)
-{
-    <body>
-
+<body>
+    <div class="div">
         <h1>Details</h1>
-        <div>
-            <hr />
-            <h2>@Model.Name</h2>
+        <a href="/Config/Index/@Model.Id">
+            <h1>Configurate your car!</h1>
+        </a>
+    </div>
+    <hr />
+    <h2>@Model.Name</h2>
+    @if (Model.Id == 1)
+    {
 
-            <span>
-                Start price from $14 200
-                <br />
-            </span>
 
-            <img src="~/App_Images/renault-megane-view.jpg" alt="Megan view" />
+        <span>
+            Start price from $14 200
+            <br />
+        </span>
 
-        </div>
+        <img src="~/App_Images/renault-megane-view.jpg" alt="Megan view" />
+
+
         <hr />
         <div>
             <h2>Interior design</h2>
@@ -46,22 +50,25 @@
             </span>
             <hr />
             <img src="~/App_Images/renault-megane-inside-2.jpg" alt="Megane inside 2" />
+            <hr />
+            <h2>Configurations</h2>
+            <a href="/Config/Details/1">
+                <img class="config-img" src="#" alt="Megane configs life img" />
+            </a>
+            <a href="/Config/Details/3">
+                <img class="config-img" src="#" alt="Megane configs zen img" />
+            </a>
+            <a href="/Config/Details/4">
+                <img class="config-img" src="#" alt="Megane configs intanse img" />
+            </a>
+            <hr />
+            
         </div>
 
-        <p>
-            <a class="back-link" href="/CarModel/Index/1">Back to list</a>
-        </p>
-    </body>
+    }
 
-}
-
-@if (Model.Id == 2)
-{
-<body>
-    <h1>Details</h1>
-    <div>
-        <hr />
-        <h2>@Model.Name</h2>
+    @if (Model.Id == 2)
+    {
 
         <span>
             Start price from $12 400
@@ -70,56 +77,57 @@
 
         <img src="~/App_Images/renault-duster-view.jpg" alt="Duster view" />
 
-    </div>
-    <hr />
-    <div>
-        <h2>Interior design</h2>
-        <img src="~/App_Images/renault-duster-inside-2.jpg" alt="Duster inside 1" />
+
         <hr />
-        <span>
-            The dynamic design of the all-new Duster will simply astound you.
-            <br>
-            All this thanks to a completely updated body, stylish rails and a grille.
-            <br>
-        </span>
-        <hr />
-        <img src="~/App_Images/renault-duster-inside-1.jpg" alt="Duster inside 2" />
-    </div>
-
-    <p>
-        <a class="back-link" href="/CarModel/Index/1">Back to list</a>
-    </p>
-</body>
-}
-
-@if (Model.Id == 3)
-{
-    <body>
-
-        <h1>Details</h1>
-
         <div>
+            <h2>Interior design</h2>
+            <img src="~/App_Images/renault-duster-inside-2.jpg" alt="Duster inside 1" />
             <hr />
-            <h2>@Model.Name</h2>
+            <span>
+                The dynamic design of the all-new Duster will simply astound you.
+                <br>
+                All this thanks to a completely updated body, stylish rails and a grille.
+                <br>
+            </span>
+            <hr />
+            <img src="~/App_Images/renault-duster-inside-1.jpg" alt="Duster inside 2" />
         </div>
+        <hr />
+        <h2>Configurations</h2>
+        <a href="/Config/Details/5">
+            <img class="config-img" src="#" alt="Duster configs life img" />
+        </a>
+        <a href="/Config/Details/6">
+            <img class="config-img" src="#" alt="Duster configs zen img" />
+        </a>
+        <a href="/Config/Details/7">
+            <img class="config-img" src="#" alt="Duster configs intanse img" />
+        </a>
+        <hr />
+
+    }
+
+    @if (Model.Id == 3)
+    {
+
+    }
+
+    @if (Model.Id == 4)
+    {
+
+    }
+
+    @if (Model.Id == 1 || Model.Id == 2)
+    {
+        <p>
+            <a class="back-link" href="/CarModel/Index/1">Back to list</a>
+        </p>
+    }
+
+    @if (Model.Id == 3 || Model.Id == 4)
+    {
         <p>
             <a class="back-link" href="/CarModel/Index/2">Back to list</a>
         </p>
-    </body>
-}
-
-@if (Model.Id == 4)
-{
-    <body>
-
-        <h1>Details</h1>
-
-        <div>
-            <hr />
-            <h2>@Model.Name</h2>
-        </div>
-        <p>
-            <a class="back-link" href="/CarModel/Index/2">Back to list</a>
-        </p>
-    </body>
-}
+    }
+</body>        

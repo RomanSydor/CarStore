@@ -5,54 +5,70 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h1>Details</h1>
 
 <div>
-    <h4>Config</h4>
+    <h2>@Model.Name</h2>
     <hr />
-    <dl class="dl-horizontal">
+    @if (Model.Id == 1)
+    {
+        <img src="#" alt="Gonfig megane life img" />
+    }
+    @if (Model.Id == 3)
+    {
+        <img src="#" alt="Gonfig megane zen img" />
+    }
+    @if (Model.Id == 4)
+    {
+        <img src="#" alt="Gonfig megane intanse img" />
+    }
+    @if (Model.Id == 5)
+    {
+        <img src="#" alt="Gonfig megane life img" />
+    }
+    @if (Model.Id == 6)
+    {
+        <img src="#" alt="Gonfig megane zen img" />
+    }
+    @if (Model.Id == 7)
+    {
+        <img src="#" alt="Gonfig megane intanse img" />
+    }
+    <dl>
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.Name):
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Name)
         </dd>
-
-        @*<dt>
-            @Html.DisplayNameFor(model => model.CarModelId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CarModelId)
-        </dd>*@
-
+        <br>
         <dt>
-            @Html.DisplayNameFor(model => model.Transmission)
+            @Html.DisplayNameFor(model => model.Transmission):
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Transmission)
         </dd>
-
+        <br>
         <dt>
-            @Html.DisplayNameFor(model => model.EngineType)
+            @Html.DisplayNameFor(model => model.EngineType):
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.EngineType)
         </dd>
-
+        <br>
         <dt>
-            @Html.DisplayNameFor(model => model.EngineVolume)
+            @Html.DisplayNameFor(model => model.EngineVolume):
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.EngineVolume)
         </dd>
-
+        <br>
         <dt>
-            @Html.DisplayNameFor(model => model.WheelSize)
+            @Html.DisplayNameFor(model => model.WheelSize):
         </dt>
 
         <dd>

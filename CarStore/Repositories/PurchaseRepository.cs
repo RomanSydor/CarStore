@@ -12,7 +12,7 @@ namespace CarStore.Repositories
     {
         private CarStoreContext db = new CarStoreContext();
 
-        public Purchase Create([Bind(Include = "Id,Customer,Phone,Date,BrandId,CarModelId,ConfigId,CarColorId")] Purchase purchase)
+        public Purchase Create(Purchase purchase)
         {
             purchase.Date = DateTime.Now;
             db.Purchases.Add(purchase);
@@ -46,7 +46,7 @@ namespace CarStore.Repositories
             return purchase;
         }
 
-        public Purchase Edit([Bind(Include = "Id,Customer,Phone,Date,BrandId,CarModelId,ConfigId,CarColorId")] Purchase purchase)
+        public Purchase Edit(Purchase purchase)
         {
             purchase.Date = DateTime.Now;
             db.Entry(purchase).State = EntityState.Modified;

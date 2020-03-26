@@ -197,6 +197,10 @@
     <Content Include="Content\ViewsCSS\BrandIndex.css" />
     <Content Include="Content\ViewsCSS\CarModelDetails.css" />
     <Content Include="Content\ViewsCSS\CarModelIndex.css" />
+    <Content Include="Content\ViewsCSS\ColorDetails.css" />
+    <Content Include="Content\ViewsCSS\ColorIndex.css" />
+    <Content Include="Content\ViewsCSS\ConfigDetails.css" />
+    <Content Include="Content\ViewsCSS\ConfigIndex.css" />
     <Content Include="Content\ViewsCSS\HomeIndex.css" />
     <Content Include="Content\ViewsCSS\_Layout.css" />
     <Content Include="favicon.ico" />
