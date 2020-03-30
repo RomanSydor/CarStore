@@ -152,6 +152,14 @@
     <Compile Include="Migrations\202003101023541_MigrateDB.designer.cs">
       <DependentUpon>202003101023541_MigrateDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003301509291_MigrateDB1.cs" />
+    <Compile Include="Migrations\202003301509291_MigrateDB1.designer.cs">
+      <DependentUpon>202003301509291_MigrateDB1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202003301533470_MigrateDB2.cs" />
+    <Compile Include="Migrations\202003301533470_MigrateDB2.designer.cs">
+      <DependentUpon>202003301533470_MigrateDB2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\CarModel.cs" />
@@ -159,6 +167,7 @@
     <Compile Include="Models\CarStoreContext.cs" />
     <Compile Include="Models\Config.cs" />
     <Compile Include="Models\Purchase.cs" />
+    <Compile Include="Models\TempPurchase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BrandRepository.cs" />
     <Compile Include="Repositories\CarColorRepository.cs" />
@@ -244,9 +253,9 @@
     <Content Include="Views\Config\Details.cshtml" />
     <Content Include="Views\Purchase\Index.cshtml" />
     <Content Include="Views\Purchase\Details.cshtml" />
-    <Content Include="Views\Purchase\Create.cshtml" />
     <Content Include="Views\Purchase\Edit.cshtml" />
     <Content Include="Views\Purchase\Delete.cshtml" />
+    <Content Include="Views\Purchase\Create.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -265,6 +274,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202003101023541_MigrateDB.resx">
       <DependentUpon>202003101023541_MigrateDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003301509291_MigrateDB1.resx">
+      <DependentUpon>202003301509291_MigrateDB1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003301533470_MigrateDB2.resx">
+      <DependentUpon>202003301533470_MigrateDB2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

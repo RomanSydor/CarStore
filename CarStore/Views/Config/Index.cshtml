@@ -1,74 +1,76 @@
-﻿@model IEnumerable<CarStore.Models.Config>
+﻿@using CarStore.Models
+@model IEnumerable<CarStore.Models.Config>
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <head>
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
-        <meta name="viewport" content="width=device-width" />
-        <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
-        <link type="text/css" rel="stylesheet" href="../../Content/ViewsCSS/ConfigIndex.css" />
-        <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Barlow+Condensed:400,700|Open+Sans:400,700|Oswald:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
-    </head>
+<head>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+    <link type="text/css" rel="stylesheet" href="../../Content/ViewsCSS/ConfigIndex.css" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Barlow+Condensed:400,700|Open+Sans:400,700|Oswald:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+</head>
 
-    <body>
+<body>
 
 
-        <h2>Configurations</h2>
+    <h2>Configurations</h2>
 
-        
-        <a href="/CarColor/Index">
+
+    @*<a href="/CarColor/Index">
             <h2>Choose your favourite color! -> </h2>
-            @*<img src="#" alt="Megane colors img" />*@
-        </a>
+            <img src="#" alt="Megane colors img" />
+        </a>*@
 
-        <table class="table-cc">
+    <table class="table-cc">
+        <tr class="tr-cc">
+            <th class="th-cc">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th class="th-cc">
+                @Html.DisplayNameFor(model => model.Transmission)
+            </th>
+            <th class="th-cc">
+                @Html.DisplayNameFor(model => model.EngineType)
+            </th>
+            <th class="th-cc">
+                @Html.DisplayNameFor(model => model.EngineVolume)
+            </th>
+            <th class="th-cc">
+                @Html.DisplayNameFor(model => model.WheelSize)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            TempPurchase.ConfigId = item.Id;
             <tr class="tr-cc">
-                <th class="th-cc">
-                    @Html.DisplayNameFor(model => model.Name)
-                </th>
-                <th class="th-cc">
-                    @Html.DisplayNameFor(model => model.Transmission)
-                </th>
-                <th class="th-cc">
-                    @Html.DisplayNameFor(model => model.EngineType)
-                </th>
-                <th class="th-cc">
-                    @Html.DisplayNameFor(model => model.EngineVolume)
-                </th>
-                <th class="th-cc">
-                    @Html.DisplayNameFor(model => model.WheelSize)
-                </th>
-                <th></th>
+                <td class="td-cc">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td class="td-cc">
+                    @Html.DisplayFor(modelItem => item.Transmission)
+                </td>
+                <td class="td-cc">
+                    @Html.DisplayFor(modelItem => item.EngineType)
+                </td>
+                <td class="td-cc">
+                    @Html.DisplayFor(modelItem => item.EngineVolume)
+                </td>
+                <td class="td-cc">
+                    @Html.DisplayFor(modelItem => item.WheelSize)
+                </td>
+                <td class="td-cc">
+                    <a href="/CarColor/Index">Choose</a>
+                </td>
             </tr>
+        }
 
-            @foreach (var item in Model)
-            {
-                <tr class="tr-cc">
-                    <td class="td-cc">
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td class="td-cc">
-                        @Html.DisplayFor(modelItem => item.Transmission)
-                    </td>
-                    <td class="td-cc">
-                        @Html.DisplayFor(modelItem => item.EngineType)
-                    </td>
-                    <td class="td-cc">
-                        @Html.DisplayFor(modelItem => item.EngineVolume)
-                    </td>
-                    <td class="td-cc">
-                        @Html.DisplayFor(modelItem => item.WheelSize)
-                    </td>
-                    <td class="td-cc">
-                        <a href="#">Choose</a>
-                    </td>
-                </tr>
-            }
+    </table>
 
-        </table>
-
-    </body>
+</body>

@@ -1,39 +1,43 @@
-﻿@model IEnumerable<CarStore.Models.CarColor>
+﻿@using CarStore.Models
+@model IEnumerable<CarStore.Models.CarColor>
 
 @{
     ViewBag.Title = "COLORS";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-    <head>
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
-        <meta name="viewport" content="width=device-width" />
-        <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
-        <link type="text/css" rel="stylesheet" href="../../Content/ViewsCSS/CarColorIndex.css" />
-        <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Barlow+Condensed:400,700|Open+Sans:400,700|Oswald:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
-    </head>
+<head>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+    <link type="text/css" rel="stylesheet" href="../../Content/ViewsCSS/CarColorIndex.css" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Barlow+Condensed:400,700|Open+Sans:400,700|Oswald:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+</head>
 
-    <body>
+<body>
 
-        <h2>Colors list</h2>
+    <h2>Colors list</h2>
 
-        <table class="table-cc">
+    <table class="table-cc">
 
-            @foreach (var item in Model)
-            {
-                <tr class="tr-cc">
-                    <td class="td-cc">
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td class="td-cc"> 
-                        @Html.ActionLink("Details", "Details", new { id = item.Id })
-                    </td>
-                </tr>
-            }
-        </table>
-        <p>
-            <a href="/CarModel/Index">Back</a> @*doesn't work correct*@
-        </p>
+        @foreach (var item in Model)
+        {
+            TempPurchase.CarColorId = item.Id;
 
-    </body>
+            <tr class="tr-cc">
+                <td class="td-cc">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td class="td-cc">
+                    <a href="/Purchase/Create">Choose</a>
+                    @*@Html.ActionLink("Details", "Details", new { id = item.Id })*@
+                </td>
+            </tr>
+        }
+    </table>
+    <p>
+        <a href="/CarModel/Index">Back</a> @*doesn't work correct*@
+    </p>
+
+</body>

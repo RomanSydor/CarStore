@@ -1,4 +1,5 @@
-﻿@model IEnumerable<CarStore.Models.CarModel>
+﻿@using CarStore.Models
+@model IEnumerable<CarStore.Models.CarModel>
 
 @{
     ViewBag.Title = "MODELS";
@@ -21,14 +22,18 @@
         <table class="table-model">
             @foreach (var item in Model)
             {
+
                 <tr class="tr-model">
                     <td class="td-model">
-                        <a href="/CarModel/Details/@item.Id">
+                        @*<a href="/CarModel/Details/@item.Id">
                             @Html.DisplayFor(modelItem => item.Name)
-                        </a>
+                        </a>*@
+                        @Html.ActionLink(item.Name, "Details", new { id = TempPurchase.BrandId = item.Id })
                     </td> 
                     <td class="td-model">
-                        <a href="/CarModel/Details/@item.Id">
+                        
+                        @*<a href="/CarModel/Details/@item.Id">*@
+                        @*<a href="/CarModel/Details/@item.Id">*@
                             @if (item.Id == 1)
                             {
                                 <img class="small-icon" src="~/App_Images/megane-small-icon.jpg" alt="Megane-small-icon" />
@@ -37,7 +42,7 @@
                             {
                                 <img class="small-icon" src="~/App_Images/duster-small-icon.jpg" alt="Megane-small-icon" />
                             }
-                        </a>
+                        @*</a>*@
                     </td>
                     @*<td class="td-model">
                         <a href="/CarColor/Index">Color</a>

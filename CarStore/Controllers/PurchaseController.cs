@@ -52,7 +52,7 @@ namespace CarStore.Controllers
             if (ModelState.IsValid)
             {
                 repo.Create(purchase);
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home");
             }
 
             return View(purchase);

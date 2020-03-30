@@ -1,4 +1,5 @@
-﻿@model CarStore.Models.CarModel
+﻿@using CarStore.Models
+@model CarStore.Models.CarModel
 
 @{
     ViewBag.Title = "Details";
@@ -13,6 +14,10 @@
     <link type="text/css" rel="stylesheet" href="../../Content/ViewsCSS/CarModelDetails.css" />
     <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Barlow+Condensed:400,700|Open+Sans:400,700|Oswald:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
 </head>
+
+@{
+    TempPurchase.CarModelId = Model.Id;
+ }
 
 <body>
     <div class="div">
@@ -62,7 +67,7 @@
                 <img class="config-img" src="#" alt="Megane configs intanse img" />
             </a>
             <hr />
-            
+
         </div>
 
     }
