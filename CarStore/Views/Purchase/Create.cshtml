@@ -11,11 +11,6 @@
 
 @using (Html.BeginForm()) 
 {
-    Purchase purchase = new Purchase();
-    purchase.BrandId = TempPurchase.BrandId;
-    purchase.CarModelId = TempPurchase.CarModelId;
-    purchase.ConfigId = TempPurchase.ConfigId;
-    purchase.CarColorId = TempPurchase.CarColorId;
 
     @Html.AntiForgeryToken()
     
