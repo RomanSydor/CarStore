@@ -30,14 +30,13 @@
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td class="td-cc">
-                    <a href="/Purchase/Create">Choose</a>
-                    @*@Html.ActionLink("Details", "Details", new { id = item.Id })*@
+                    <a href="/CarColor/Choose/@item.Id">Choose</a>
                 </td>
             </tr>
         }
     </table>
-    <p>
-        <a href="/CarModel/Index">Back</a> @*doesn't work correct*@
-    </p>
+    @*<p>
+        <a href="/CarModel/Index">Back</a> doesn't work correct
+    </p>*@
 
 </body>

@@ -48,7 +48,6 @@
 
         @foreach (var item in Model)
         {
-            TempPurchase.ConfigId = item.Id;
             <tr class="tr-cc">
                 <td class="td-cc">
                     @Html.DisplayFor(modelItem => item.Name)
@@ -66,7 +65,7 @@
                     @Html.DisplayFor(modelItem => item.WheelSize)
                 </td>
                 <td class="td-cc">
-                    <a href="/CarColor/Index">Choose</a>
+                    <a href="/Config/Choose/@item.Id">Choose</a>
                 </td>
             </tr>
         }

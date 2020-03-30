@@ -1,4 +1,5 @@
-﻿using CarStore.Repositories;
+﻿using CarStore.Models;
+using CarStore.Repositories;
 using System.Net;
 using System.Web.Mvc;
 
@@ -15,6 +16,7 @@ namespace CarStore.Controllers
 
         public ActionResult Index(int? id)
         {
+            TempPurchase.BrandId = id.Value;
             return View(repo.Index(id));
         }
 
@@ -29,6 +31,7 @@ namespace CarStore.Controllers
             {
                 return HttpNotFound();
             }
+            TempPurchase.CarModelId = id.Value;
             return View(repo.Details(id));
         }
     }
