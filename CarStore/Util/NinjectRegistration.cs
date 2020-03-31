@@ -1,4 +1,5 @@
 ﻿using CarStore.Repositories;
+using CarStore.Services;
 using Ninject.Modules;
 
 namespace IoSApp.Util
@@ -12,6 +13,7 @@ namespace IoSApp.Util
             Bind<ICarColorRepository>().To<CarColorRepository>();
             Bind<IConfigRepository>().To<ConfigRepository>();
             Bind<IPurchaseRepository>().To<PurchaseRepository>();
+            Bind<IPurchaseService>().To<PurchaseService>();
         }
     }
 }

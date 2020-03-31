@@ -23,20 +23,16 @@
 
         @foreach (var item in Model)
         {
-            TempPurchase.CarColorId = item.Id;
 
             <tr class="tr-cc">
                 <td class="td-cc">
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td class="td-cc">
-                    <a href="/CarColor/Choose/@item.Id">Choose</a>
+                    <a href="/PurchaseBuild/CarColorChoose/@item.Id">Choose</a>
                 </td>
             </tr>
         }
     </table>
-    @*<p>
-        <a href="/CarModel/Index">Back</a> doesn't work correct
-    </p>*@
 
 </body>

@@ -19,12 +19,6 @@ namespace CarStore.Controllers
             return View(repo.Index(id));
         }
 
-        public ActionResult Choose(int? id) 
-        {
-            TempPurchase.ConfigId = id.Value;
-            return RedirectToAction("Index", "CarColor");
-        }
-
         public ActionResult Details(int? id)
         {
             if (id == null)

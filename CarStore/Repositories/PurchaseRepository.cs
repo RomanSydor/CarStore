@@ -1,4 +1,5 @@
 ﻿using CarStore.Models;
+using CarStore.Services;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -14,10 +15,10 @@ namespace CarStore.Repositories
 
         public Purchase Create(Purchase purchase)
         {
-            purchase.BrandId = TempPurchase.BrandId;
-            purchase.CarModelId = TempPurchase.CarModelId;
-            purchase.ConfigId = TempPurchase.ConfigId;
-            purchase.CarColorId = TempPurchase.CarColorId;
+            purchase.BrandId = PurchaseService.BrandId;
+            purchase.CarModelId = PurchaseService.CarModelId;
+            purchase.ConfigId = PurchaseService.ConfigId;
+            purchase.CarColorId = PurchaseService.CarColorId;
             purchase.Date = DateTime.Now;
             db.Purchases.Add(purchase);
             db.SaveChanges();

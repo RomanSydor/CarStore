@@ -25,8 +25,7 @@
 
                 <tr class="tr-model">
                     <td class="td-model">
-                        @Html.ActionLink(item.Name, "Details", new { id = item.Id})
-                    
+                        <a href="/PurchaseBuild/CarModelChoose/@item.Id">@item.Name</a>
                     </td>
                     <td class="td-model">
                             @if (item.Id == 1)

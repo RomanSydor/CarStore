@@ -15,6 +15,7 @@ namespace CarStore.Controllers
 
         IPurchaseRepository repo;
 
+
         public PurchaseController(IPurchaseRepository r) 
         {
             repo = r;
@@ -106,6 +107,8 @@ namespace CarStore.Controllers
             repo.DeleteConfirmed(id);
             return RedirectToAction("Index");
         }
+
+
 
     }
 }

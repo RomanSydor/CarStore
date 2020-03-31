@@ -20,12 +20,6 @@
 
     <h2>Configurations</h2>
 
-
-    @*<a href="/CarColor/Index">
-            <h2>Choose your favourite color! -> </h2>
-            <img src="#" alt="Megane colors img" />
-        </a>*@
-
     <table class="table-cc">
         <tr class="tr-cc">
             <th class="th-cc">
@@ -65,7 +59,7 @@
                     @Html.DisplayFor(modelItem => item.WheelSize)
                 </td>
                 <td class="td-cc">
-                    <a href="/Config/Choose/@item.Id">Choose</a>
+                    <a href="/PurchaseBuild/ConfigChoose/@item.Id">Choose</a>
                 </td>
             </tr>
         }
