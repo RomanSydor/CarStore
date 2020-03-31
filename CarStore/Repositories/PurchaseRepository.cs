@@ -1,25 +1,17 @@
 ﻿using CarStore.Models;
-using CarStore.Services;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Web;
-using System.Web.Mvc;
 
 namespace CarStore.Repositories
 {
-    public class PurchaseRepository: IDisposable, IPurchaseRepository
+    public class PurchaseRepository : IDisposable, IPurchaseRepository
     {
         private CarStoreContext db = new CarStoreContext();
 
         public Purchase Create(Purchase purchase)
         {
-            purchase.BrandId = PurchaseService.BrandId;
-            purchase.CarModelId = PurchaseService.CarModelId;
-            purchase.ConfigId = PurchaseService.ConfigId;
-            purchase.CarColorId = PurchaseService.CarColorId;
-            purchase.Date = DateTime.Now;
             db.Purchases.Add(purchase);
             db.SaveChanges();
             return purchase;
@@ -53,7 +45,7 @@ namespace CarStore.Repositories
 
         public Purchase Edit(Purchase purchase)
         {
-            purchase.Date = DateTime.Now;
+            //purchase.Date = DateTime.Now;
             db.Entry(purchase).State = EntityState.Modified;
             db.SaveChanges();
             return purchase;

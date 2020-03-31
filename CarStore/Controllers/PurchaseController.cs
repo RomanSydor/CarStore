@@ -1,5 +1,6 @@
 ﻿using CarStore.Models;
 using CarStore.Repositories;
+using CarStore.Services;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -14,11 +15,12 @@ namespace CarStore.Controllers
     {
 
         IPurchaseRepository repo;
+        IPurchaseService _service;
 
-
-        public PurchaseController(IPurchaseRepository r) 
+        public PurchaseController(IPurchaseRepository r, IPurchaseService s)
         {
             repo = r;
+            _service = s;
         }
 
         public ActionResult Index()
@@ -52,11 +54,14 @@ namespace CarStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                repo.Create(purchase);
+                var pur = _service.Create();
+                pur.Phone = purchase.Phone;
+                pur.Customer = purchase.Customer;
+                repo.Create(pur);
                 return RedirectToAction("Index", "Home");
             }
 
-            return View(purchase);
+            return View(_service.Create());
         }
 
         public ActionResult Edit(int? id)

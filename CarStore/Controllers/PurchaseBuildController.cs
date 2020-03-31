@@ -11,7 +11,6 @@ namespace CarStore.Controllers
     public class PurchaseBuildController : Controller
     {
         IPurchaseService service;
-        public Purchase purchase = new Purchase();
 
         public PurchaseBuildController(IPurchaseService serv) 
         {

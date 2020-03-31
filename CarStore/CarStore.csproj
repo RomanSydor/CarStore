@@ -259,9 +259,7 @@
     <Content Include="Views\Purchase\Delete.cshtml" />
     <Content Include="Views\Purchase\Create.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\PurchaseBiuld\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

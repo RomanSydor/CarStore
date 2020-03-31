@@ -1,35 +1,56 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using CarStore.Models;
+using System;
 
 namespace CarStore.Services
 {
     public class PurchaseService : IPurchaseService
     {
-        public static int BrandId{ get; set; }
-        public static int CarModelId { get; set; }
-        public static int ConfigId { get; set; }
-        public static int CarColorId { get; set; }
+        Purchase _purchase;
 
         public void ChooseBrand(int? id)
         {
-            BrandId = id.Value;
+            if (_purchase == null)
+            {
+                _purchase = new Purchase();
+            }
+           _purchase.BrandId = id.Value;
         }
 
         public void ChooseCarColor(int? id)
         {
-            CarColorId = id.Value;
+            if (_purchase == null)
+            {
+                _purchase = new Purchase();
+            }
+            _purchase.CarColorId = id.Value;
         }
 
         public void ChooseCarModel(int? id)
         {
-            CarModelId = id.Value;
+            if (_purchase == null)
+            {
+                _purchase = new Purchase();
+            }
+            _purchase.CarModelId = id.Value;
         }
 
         public void ChooseConfig(int? id)
         {
-            ConfigId = id.Value;
+            if (_purchase == null)
+            {
+                _purchase = new Purchase();
+            }
+            _purchase.ConfigId = id.Value;
+        }
+
+        public Purchase Create()
+        {
+            if (_purchase == null)
+            {
+                _purchase = new Purchase();
+            }
+            _purchase.Date = DateTime.Now;
+            return _purchase;
         }
     }
 }
