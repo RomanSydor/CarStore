@@ -43,14 +43,6 @@ namespace CarStore.Repositories
             return purchase;
         }
 
-        public Purchase Edit(Purchase purchase)
-        {
-            //purchase.Date = DateTime.Now;
-            db.Entry(purchase).State = EntityState.Modified;
-            db.SaveChanges();
-            return purchase;
-        }
-
         public IEnumerable<Purchase> Index()
         {
             return db.Purchases.ToList();

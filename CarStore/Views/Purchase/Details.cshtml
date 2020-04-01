@@ -5,71 +5,94 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+    <head>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        <meta name="viewport" content="width=device-width" />
+        <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+        <link type="text/css" rel="stylesheet" href="../../Content/ViewsCSS/PurchaseDetails.css" />
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Barlow+Condensed:400,700|Open+Sans:400,700|Oswald:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    </head>
+    <body>
+        <h2>Details</h2>
 
-<div>
-    <h4>Purchase</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Customer)
-        </dt>
+        <div>
+            <hr />
+            <h3>Purchase</h3>
+            <div class="div-dl">
+                <dl class="dl">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Customer):
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Customer)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.Customer)
+                    </dd>
+                    <hr />
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Phone):
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Phone)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.Phone)
+                    </dd>
+                    <hr />
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Date):
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Phone)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.Date)
+                    </dd>
+                    <hr />
+                    <dt>
+                        @Html.DisplayNameFor(model => model.BrandId):
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Date)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.BrandId)
+                    </dd>
+                    <hr />
+                    <dt>
+                        @Html.DisplayNameFor(model => model.CarModelId):
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Date)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.CarModelId)
+                    </dd>
+                    <hr />
+                    <dt>
+                        @Html.DisplayNameFor(model => model.ConfigId):
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.BrandId)
-        </dt>
+                    <dd>
+                        @Html.DisplayFor(model => model.ConfigId)
+                    </dd>
+                    <hr />
+                    <dt>
+                        @Html.DisplayNameFor(model => model.CarColorId):
+                    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.BrandId)
-        </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.CarColorId)
+                    </dd>
+                    <hr />
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Price):
+                    </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CarModelId)
-        </dt>
+                    <dd>
+                        $@Html.DisplayFor(model => model.Price)
+                    </dd>
+                    <hr />
+                </dl>
+            </div>
+        </div>
+        <p>
+            <div class="btn-div">
+                @Html.ActionLink("Ok", "Index", "Home") |
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+            </div>    
+        </p>
 
-        <dd>
-            @Html.DisplayFor(model => model.CarModelId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ConfigId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ConfigId)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.CarColorId)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.CarColorId)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+    </body>

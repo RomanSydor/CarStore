@@ -37,31 +37,37 @@
             <th class="th-cc">
                 @Html.DisplayNameFor(model => model.WheelSize)
             </th>
+            <th class="th-cc">
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
             <th></th>
         </tr>
 
         @foreach (var item in Model)
         {
-            <tr class="tr-cc">
-                <td class="td-cc">
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td class="td-cc">
-                    @Html.DisplayFor(modelItem => item.Transmission)
-                </td>
-                <td class="td-cc">
-                    @Html.DisplayFor(modelItem => item.EngineType)
-                </td>
-                <td class="td-cc">
-                    @Html.DisplayFor(modelItem => item.EngineVolume)
-                </td>
-                <td class="td-cc">
-                    @Html.DisplayFor(modelItem => item.WheelSize)
-                </td>
-                <td class="td-cc">
-                    <a href="/PurchaseBuild/ConfigChoose/@item.Id">Choose</a>
-                </td>
-            </tr>
+    <tr class="tr-cc">
+        <td class="td-cc">
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td class="td-cc">
+            @Html.DisplayFor(modelItem => item.Transmission)
+        </td>
+        <td class="td-cc">
+            @Html.DisplayFor(modelItem => item.EngineType)
+        </td>
+        <td class="td-cc">
+            @Html.DisplayFor(modelItem => item.EngineVolume)
+        </td>
+        <td class="td-cc">
+            @Html.DisplayFor(modelItem => item.WheelSize)
+        </td>
+        <td class="td-cc">
+            $@Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td class="td-cc">
+            <a href="/PurchaseBuild/ConfigChoose/@item.Id">Choose</a>
+        </td>
+    </tr>
         }
 
     </table>

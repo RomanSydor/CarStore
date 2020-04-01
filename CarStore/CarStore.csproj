@@ -161,6 +161,14 @@
     <Compile Include="Migrations\202003301533470_MigrateDB2.designer.cs">
       <DependentUpon>202003301533470_MigrateDB2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004010652442_MigrateDB3.cs" />
+    <Compile Include="Migrations\202004010652442_MigrateDB3.designer.cs">
+      <DependentUpon>202004010652442_MigrateDB3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004010711164_MigrateDB4.cs" />
+    <Compile Include="Migrations\202004010711164_MigrateDB4.designer.cs">
+      <DependentUpon>202004010711164_MigrateDB4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\CarModel.cs" />
@@ -213,6 +221,7 @@
     <Content Include="Content\ViewsCSS\ConfigDetails.css" />
     <Content Include="Content\ViewsCSS\ConfigIndex.css" />
     <Content Include="Content\ViewsCSS\HomeIndex.css" />
+    <Content Include="Content\ViewsCSS\PurchaseDetails.css" />
     <Content Include="Content\ViewsCSS\_Layout.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -282,6 +291,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003301533470_MigrateDB2.resx">
       <DependentUpon>202003301533470_MigrateDB2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004010652442_MigrateDB3.resx">
+      <DependentUpon>202004010652442_MigrateDB3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004010711164_MigrateDB4.resx">
+      <DependentUpon>202004010711164_MigrateDB4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

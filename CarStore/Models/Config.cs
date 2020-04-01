@@ -14,5 +14,6 @@ namespace CarStore.Models
         public string EngineType { get; set; }
         public float EngineVolume { get; set; }
         public int WheelSize { get; set; }
+        public float Price { get; set; }
     }
 }

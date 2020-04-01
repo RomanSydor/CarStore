@@ -58,36 +58,24 @@ namespace CarStore.Controllers
                 pur.Phone = purchase.Phone;
                 pur.Customer = purchase.Customer;
                 repo.Create(pur);
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("PurchaseConfirm", new { pur.Id });
             }
-
             return View(_service.Create());
         }
 
-        public ActionResult Edit(int? id)
+        public ActionResult PurchaseConfirm(int? id) 
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            
+            return RedirectToAction("Details", new { id });
+        }
+
+        public ActionResult Edit(int id)
+        {
             if (repo.Edit(id) == null)
             {
                 return HttpNotFound();
             }
-            return View(repo.Edit(id));
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Customer,Phone,Date,BrandId,CarModelId,ConfigId,CarColorId")] Purchase purchase)
-        {
-            if (ModelState.IsValid)
-            {
-                repo.Edit(purchase);
-                return RedirectToAction("Index");
-            }
-            return View(purchase);
+            repo.DeleteConfirmed(id);
+            return RedirectToAction("Index", "Brand");
         }
 
         public ActionResult Delete(int? id)
@@ -112,8 +100,5 @@ namespace CarStore.Controllers
             repo.DeleteConfirmed(id);
             return RedirectToAction("Index");
         }
-
-
-
     }
 }

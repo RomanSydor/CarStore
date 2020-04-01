@@ -17,6 +17,7 @@ namespace CarStore.Models
         public int CarModelId { get; set; }
         public int ConfigId { get; set; }
         public int CarColorId { get; set; }
+        public float Price { get; set; }
 
     }
 }

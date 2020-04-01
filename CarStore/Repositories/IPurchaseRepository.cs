@@ -9,7 +9,6 @@ namespace CarStore.Repositories
         Purchase Details(int? id);
         Purchase Create(Purchase purchase);
         Purchase Edit(int? id);
-        Purchase Edit(Purchase purchase);
         Purchase Delete(int? id);
         Purchase DeleteConfirmed(int id);
     }
