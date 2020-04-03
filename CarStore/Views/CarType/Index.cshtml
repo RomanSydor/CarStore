@@ -1,0 +1,39 @@
+﻿@model IEnumerable<CarStore.Models.CarType>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="../../Content/ViewsCSS/CarModelIndex.css" /> @*to Add type stiles*@
+    <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Barlow+Condensed:400,700|Open+Sans:400,700|Oswald:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+
+</head>
+
+    <body>
+
+
+        <h2>Index</h2>
+
+        <table class="table-model">
+            
+
+            @foreach (var item in Model)
+            {
+                <tr class="tr-model">
+                    <td class="td-model">
+                        @Html.DisplayFor(modelItem => item.TypeName)
+                    </td>
+
+                    <td class="td-model">
+                        <a href="/PurchaseBuild/CarTypeChoose/@item.Id">View cars</a>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </body>

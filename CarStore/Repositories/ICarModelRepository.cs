@@ -5,7 +5,7 @@ namespace CarStore.Repositories
 {
     public interface ICarModelRepository
     {
-        IEnumerable<CarModel> Index(int? id);
+        IEnumerable<CarModel> Index();
         CarModel Details(int? id);
     }
 }

@@ -8,7 +8,7 @@ namespace CarStore.Services
         CarStoreContext db = new CarStoreContext();
         Purchase _purchase;
 
-        public void ChooseBrand(int? id)
+        public void BrandChoose(int? id)
         {
             if (_purchase == null)
             {
@@ -18,7 +18,17 @@ namespace CarStore.Services
            _purchase.BrandId = id.Value;
         }
 
-        public void ChooseCarColor(int? id)
+        public void CarTypeChoose(int? id) 
+        {
+            if (_purchase == null)
+            {
+                _purchase = new Purchase();
+            }
+            _purchase.Price = 0;
+            _purchase.CarTypeId = id.Value;
+        }
+
+        public void CarColorChoose(int? id)
         {
             CarColor carColor;
             if (_purchase == null)
@@ -30,7 +40,7 @@ namespace CarStore.Services
             _purchase.CarColorId = id.Value;
         }
 
-        public void ChooseCarModel(int? id)
+        public void CarModelChoose(int? id)
         {
             if (_purchase == null)
             {
@@ -40,7 +50,7 @@ namespace CarStore.Services
             _purchase.CarModelId = id.Value;
         }
 
-        public void ChooseConfig(int? id)
+        public void ConfigChoose(int? id)
         {
             Config config;
             if (_purchase == null)

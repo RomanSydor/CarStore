@@ -14,6 +14,7 @@ namespace CarStore.Models
         public string Phone { get; set; }
         public DateTime Date { get; set; }
         public int BrandId { get; set; }
+        public int CarTypeId { get; set; }
         public int CarModelId { get; set; }
         public int ConfigId { get; set; }
         public int CarColorId { get; set; }

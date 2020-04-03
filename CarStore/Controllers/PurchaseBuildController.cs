@@ -19,22 +19,29 @@ namespace CarStore.Controllers
 
         public ActionResult BrandChoose(int? id) 
         {
-            service.ChooseBrand(id);
+            service.BrandChoose(id);
+            return RedirectToAction("Index", "CarType");
+        }
+
+        public ActionResult CarTypeChoose(int? id)
+        {
+            service.CarTypeChoose(id);
             return RedirectToAction("Index", "CarModel", new { id });
         }
+
         public ActionResult CarModelChoose(int? id)
         {
-            service.ChooseCarModel(id);
+            service.CarModelChoose(id);
             return RedirectToAction("Details", "CarModel", new { id });
         }
         public ActionResult ConfigChoose(int? id)
         {
-            service.ChooseConfig(id);
+            service.ConfigChoose(id);
             return RedirectToAction("Index", "CarColor");
         }
         public ActionResult CarColorChoose(int? id)
         {
-            service.ChooseCarColor(id);
+            service.CarColorChoose(id);
             return RedirectToAction("Create", "Purchase");
         }
     }

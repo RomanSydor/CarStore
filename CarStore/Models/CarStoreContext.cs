@@ -13,5 +13,6 @@ namespace CarStore.Models
         public DbSet<Config> Configs { get; set; }
         public DbSet<CarColor> CarColors { get; set; }
         public DbSet<Purchase> Purchases { get; set; }
+        public DbSet<CarType> CarTypes { get; set; }
     }
 }

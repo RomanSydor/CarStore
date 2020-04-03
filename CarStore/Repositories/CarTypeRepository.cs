@@ -1,30 +1,18 @@
 ﻿using CarStore.Models;
-using CarStore.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 
 namespace CarStore.Repositories
 {
-    public class CarModelRepository : IDisposable, ICarModelRepository
+    public class CarTypeRepository : IDisposable, ICarTypeRepository
     {
-
         private CarStoreContext db = new CarStoreContext();
-        ICarSortService _sort;
-        public CarModelRepository(ICarSortService s) 
-        {
-            _sort = s;
-        }
 
-        public CarModel Details(int? id)
+        public IEnumerable<CarType> Index()
         {
-            CarModel carModel = db.CarModels.Find(id);
-            return carModel;
-        }
-
-        public IEnumerable<CarModel> Index()
-        {
-            return _sort.Sort();
+            return db.CarTypes.ToList();    
         }
 
         protected void Dispose(bool disposing)

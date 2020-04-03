@@ -14,9 +14,9 @@ namespace CarStore.Controllers
             repo = r;
         }
 
-        public ActionResult Index(int? id)
+        public ActionResult Index()
         {
-            return View(repo.Index(id));
+            return View(repo.Index());
         }
 
         public ActionResult Details(int? id)
