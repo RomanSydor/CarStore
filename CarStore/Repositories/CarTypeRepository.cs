@@ -2,26 +2,17 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 
 namespace CarStore.Repositories
 {
-    public class ConfigRepository : IDisposable, IConfigRepository
+    public class CarTypeRepository : IDisposable, ICarTypeRepository
     {
-
         private CarStoreContext db = new CarStoreContext();
 
-        public Config Details(int? id)
+        public IEnumerable<CarType> Index()
         {
-            Config config = db.Configs.Find(id);
-            return config;
-        }
-
-        public IEnumerable<Config> Index(int? id)
-        {
-            IEnumerable<Config> result = db.Configs
-                .Where(r => r.CarModelId == id);
-
-            return result.ToList();
+            return db.CarTypes.ToList();
         }
 
         protected void Dispose(bool disposing)

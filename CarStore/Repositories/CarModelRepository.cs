@@ -1,4 +1,5 @@
 ﻿using CarStore.Models;
+using CarStore.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,13 @@ namespace CarStore.Repositories
     {
 
         private CarStoreContext db = new CarStoreContext();
+        IPurchaseService _service;
+        
+        public CarModelRepository(IPurchaseService s)
+        {
+            _service = s;
+        }
+
 
         public CarModel Details(int? id)
         {
@@ -18,22 +26,12 @@ namespace CarStore.Repositories
 
         public IEnumerable<CarModel> Index(int? id)
         {
-            var result = new List<CarModel>();
-            if (id == null)
-            {
-                return db.CarModels.ToList();
-            }
-            else
-            {
-                foreach (var cm in db.CarModels)
-                {
-                    if (cm.BrandId == id)
-                    {
-                        result.Add(cm);
-                    }
-                }
-                return result.ToList();
-            }
+            var p = _service.Create();
+            IEnumerable<CarModel> result = db.CarModels
+                .Where(r => r.BrandId == p.BrandId
+                && r.CarTypeId == p.CarTypeId);
+
+            return result.ToList();
         }
 
         protected void Dispose(bool disposing)

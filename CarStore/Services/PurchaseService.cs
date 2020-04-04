@@ -18,6 +18,16 @@ namespace CarStore.Services
            _purchase.BrandId = id.Value;
         }
 
+        public void ChooseCarType(int? id)
+        {
+            if (_purchase == null)
+            {
+                _purchase = new Purchase();
+            }
+            _purchase.Price = 0;
+            _purchase.CarTypeId = id.Value;
+        }
+
         public void ChooseCarColor(int? id)
         {
             CarColor carColor;

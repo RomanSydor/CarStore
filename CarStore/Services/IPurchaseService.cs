@@ -8,6 +8,7 @@ namespace CarStore.Services
         void ChooseCarModel(int? id);
         void ChooseConfig(int? id);
         void ChooseCarColor(int? id);
+        void ChooseCarType(int? id);
         Purchase Create();
     }
 }

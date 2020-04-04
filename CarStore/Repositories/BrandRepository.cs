@@ -17,24 +17,10 @@ namespace CarStore.Repositories
         }
 
 
-        public IEnumerable<Brand> Index(int? id)
-        {
-            var result = new List<Brand>();
-            if (id == null)
-            {
-                return db.Brands.ToList();
-            }
-            else
-            {
-                foreach (var b in db.Brands)
-                {
-                    if (b.Id == id)
-                    {
-                        result.Add(b);
-                    }
-                }
-                return result.ToList();
-            }
+        public IEnumerable<Brand> Index()
+        {    
+            return db.Brands.ToList();
+            
         }
 
         protected void Dispose(bool disposing)
