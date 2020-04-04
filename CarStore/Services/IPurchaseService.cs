@@ -4,11 +4,11 @@ namespace CarStore.Services
 {
     public interface IPurchaseService
     {
-        void ChooseBrand(int? id);
-        void ChooseCarModel(int? id);
-        void ChooseConfig(int? id);
-        void ChooseCarColor(int? id);
-        void ChooseCarType(int? id);
+        void BrandChoose(int? id);
+        void CarTypeChoose(int? id);
+        void CarModelChoose(int? id);
+        void ConfigChoose(int? id);
+        void CarColorChoose(int? id);
         Purchase Create();
     }
 }
