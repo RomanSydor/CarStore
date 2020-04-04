@@ -1,28 +1,26 @@
 ﻿using CarStore.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace CarStore.Services
 {
     public class CarSortService : ICarSortService
     {
         CarStoreContext db = new CarStoreContext();
-        IPurchaseService _service;
+        IIdSaverService _idSaver;
 
-        public CarSortService(IPurchaseService s) 
+        public CarSortService(IIdSaverService id)
         {
-            _service = s;
+            _idSaver = id;
         }
 
         public IEnumerable<CarModel> Sort()
         {
             var result = new List<CarModel>();
-            var p = _service.Create();
+            var p = _idSaver.AllIds();
             foreach (var c in db.CarModels)
             {
-                if (c.BrandId == p.BrandId && c.CarTypeId == p.CarTypeId)
+                if (c.BrandId == p.SavedBrandId && c.CarTypeId == p.SavedCarTypeId)
                 {
                     result.Add(c);
                 }

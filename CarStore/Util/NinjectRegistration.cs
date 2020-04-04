@@ -14,8 +14,9 @@ namespace IoSApp.Util
             Bind<IConfigRepository>().To<ConfigRepository>();
             Bind<IPurchaseRepository>().To<PurchaseRepository>();
             Bind<ICarTypeRepository>().To<CarTypeRepository>();
-            Bind<IPurchaseService>().To<PurchaseService>().InSingletonScope();
+            Bind<IPurchaseService>().To<PurchaseService>();
             Bind<ICarSortService>().To<CarSortService>();
+            Bind<IIdSaverService>().To<IdSaverService>().InSingletonScope();
         }
     }
 }
