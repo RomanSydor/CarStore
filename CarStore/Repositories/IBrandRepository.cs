@@ -5,7 +5,7 @@ namespace CarStore.Repositories
 {
     public interface IBrandRepository
     {
-        IEnumerable<Brand> Index();
+        IEnumerable<Brand> Index(int? id);
         Brand Details(int? id);
 
     }

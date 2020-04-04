@@ -9,7 +9,6 @@ namespace CarStore.Models
     {
         public int Id { get; set; }
         public int BrandId { get; set; }
-        public int CarTypeId { get; set; }
         public string Name { get; set; }
     }
 }
