@@ -1,0 +1,29 @@
+﻿.table-type {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    text-align: left;
+    background-color: #000000;
+    opacity: 1;
+    margin-top: 50px;
+    margin-bottom: 25vh;
+    border-top: 1px solid #ffffff;
+}
+
+.td-type {
+    font-size: 40px;
+    padding-left: 40px;
+    margin-left: 0px;
+}
+
+.tr-type {
+    border-bottom: 1px solid #ffffff;
+}
+
+img {
+    margin-left: 70px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    height: 270px;
+    width: 400px;
+}

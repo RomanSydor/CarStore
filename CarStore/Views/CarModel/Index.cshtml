@@ -19,27 +19,43 @@
     <body>
         <h1>Models</h1>
         <hr />
+        <div class="div-empty">
+            @if (Model.Count() == 0)
+            {
+                <h2>Unfortunately, list is empty.</h2>
+            }
+        </div>
         <table class="table-model">
             @foreach (var item in Model)
             {
-
                 <tr class="tr-model">
+
                     <td class="td-model">
                         <a href="/PurchaseBuild/CarModelChoose/@item.Id">@item.Name</a>
                     </td>
                     <td class="td-model">
-                            @if (item.Id == 1)
-                            {
-                                <img class="small-icon" src="~/App_Images/megane-small-icon.jpg" alt="Megane-small-icon" />
-                            }
-                            @if (item.Id == 2)
-                            {
-                                <img class="small-icon" src="~/App_Images/duster-small-icon.jpg" alt="Megane-small-icon" />
-                            }
+                        @if (item.Id == 1)
+                        {
+                            <img class="renault-small-icon" src="~/App_Images/renault-megane-small-icon.jpg" alt="Megane-small-icon" />
+                        }
+                        @if (item.Id == 2)
+                        {
+                            <img class="renault-small-icon" src="~/App_Images/renault-duster-small-icon.jpg" alt="Duster-small-icon" />
+                        }
+                        @if (item.Id == 3)
+                        {
+                            <img class="audi-small-icon" src="~/App_Images/audi-RS-7-small-icon.png" alt="RS7-small-icon" />
+                        }
+                        @if (item.Id == 4)
+                        {
+                            <img class="audi-small-icon" src="~/App_Images/audi-Q-7-small-icon.png" alt="Q7-small-icon" />
+                        }
                     </td>
                 </tr>
             }
 
         </table>
+
+        <a class="back-link" href="/CarType/Index">Back to types</a>
 
     </body>

@@ -1,10 +1,29 @@
-﻿img{
-    height: 520px;
-    width: 900px;
-    margin-left: 250px;
+﻿.img-audi {
+    height: 620px;
+    width: 1050px;
+    margin-left: 175px;
 }
 
-span {
+.img-renault {
+    height: 620px;
+    width: 1000px;
+    margin-left: 200px;
+}
+
+
+.img-audi-wide {
+    height: 500px;
+    width: 1400px;
+    margin-left: 0px;
+}
+
+.img-audi-tall {
+    height: 1000px;
+    width: 850px;
+    margin-left: 275px;
+}
+
+.div-text {
     position: center;
     font-size: 25px;
     line-height: 2;
@@ -17,12 +36,27 @@ span {
     padding-left: 15px;
 }
 
-.config-img{
+.renault-config-img {
     height: 250px;
-    width: 550px;
+    width: 400px;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 35px;
 }
 
-.div {
+.audi-config-img {
+    height: 150px;
+    width: 400px;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 35px;
+}
+
+.div-cfg {
     display: flex;
     justify-content: space-between;
+}
+
+.span {
+    font-size:20px;
 }

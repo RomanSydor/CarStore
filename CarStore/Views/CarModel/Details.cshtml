@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="div">
+    <div class="div-cfg">
         <h1>Details</h1>
         <a href="/Config/Index/@Model.Id">
             <h1>Configurate your car!</h1>
@@ -24,98 +24,245 @@
     </div>
     <hr />
     <h2>@Model.Name</h2>
+
+    @*////////////////*@
+    @*RENAULT MEGANE*@
+    @*/////////////*@
+
     @if (Model.Id == 1)
     {
 
-
-        <span>
+        <div class="div-text">
             Start price from $15 000
             <br />
-        </span>
-
-        <img src="~/App_Images/renault-megane-view.jpg" alt="Megan view" />
-
+        </div>
+        <br>
+        <img class="img-renault" src="~/App_Images/renault-megane-view.jpg" alt="Megan view" />
 
         <hr />
         <div>
             <h2>Interior design</h2>
-            <img src="~/App_Images/renault-megane-inside-1.jpg" alt="Megane inside 1" />
+            <img class="img-renault" src="~/App_Images/renault-megane-inside-1.jpg" alt="Megane inside 1" />
             <hr />
-            <span>
+            <div class="div-text">
                 Appreciate its impeccable finish
                 <br>
-                Digital speedometer, ergonomic center console, large 8.7-inch comfortable vertical touch screen * and more. In the interior of the new Renault MEGANE Sedan you are at the center of the event.
+                Digital speedometer, ergonomic center console, large 8.7-inch comfortable vertical touch screen * and more.
+                In the interior of the new Renault MEGANE Sedan you are at the center of the event.
                 <br>
                 * Depending on version
                 <br>
-            </span>
+            </div>
             <hr />
-            <img src="~/App_Images/renault-megane-inside-2.jpg" alt="Megane inside 2" />
-            <hr />
-            <h2>Configurations</h2>
-            <a href="/Config/Details/1">
-                <img class="config-img" src="#" alt="Megane configs life img" />
-            </a>
-            <a href="/Config/Details/3">
-                <img class="config-img" src="#" alt="Megane configs zen img" />
-            </a>
-            <a href="/Config/Details/4">
-                <img class="config-img" src="#" alt="Megane configs intanse img" />
-            </a>
-            <hr />
-
+            <img class="img-renault" src="~/App_Images/renault-megane-inside-2.jpg" alt="Megane inside 2" />
         </div>
 
+        <hr />
+        <h2>Configurations</h2>
+
+        <div class="div-cfg">
+            <span class="span">1/3</span>
+            <a href="/Config/Details/1">
+                <img class="renault-config-img" src="~/App_Images/renault-megane-cfg-life.jpg" alt="Megane-configs-life-img" />
+            </a>
+            <span class="span">2/3</span>
+            <a href="/Config/Details/3">
+                <img class="renault-config-img" src="~/App_Images/renault-megane-cfg-zen.jpg" alt="Megane-configs-zen-img" />
+            </a>
+            <span class="span">3/3</span>
+            <a href="/Config/Details/4">
+                <img class="renault-config-img" src="~/App_Images/renault-megane-cfg-intense.jpg" alt="Megane-configs-intanse-img" />
+            </a>
+        </div>
+        <hr />
+
     }
+
+
+    @*RENAULT DUSTER*@
+    @*/////////////*@
 
     @if (Model.Id == 2)
     {
 
-        <span>
+        <div class="div-text">
             Start price from $15 200
             <br />
-        </span>
-
-        <img src="~/App_Images/renault-duster-view.jpg" alt="Duster view" />
-
+        </div>
+        <br>
+        <img class="img-renault" src="~/App_Images/renault-duster-view.jpg" alt="Duster view" />
 
         <hr />
         <div>
             <h2>Interior design</h2>
-            <img src="~/App_Images/renault-duster-inside-2.jpg" alt="Duster inside 1" />
+            <img class="img-renault" src="~/App_Images/renault-duster-inside-2 (2).jpg" alt="Duster inside 1" />
             <hr />
-            <span>
+            <div class="div-text">
                 The dynamic design of the all-new Duster will simply astound you.
                 <br>
                 All this thanks to a completely updated body, stylish rails and a grille.
                 <br>
-            </span>
+            </div>
             <hr />
-            <img src="~/App_Images/renault-duster-inside-1.jpg" alt="Duster inside 2" />
+            <img class="img-renault" src="~/App_Images/renault-duster-inside-1.jpg" alt="Duster inside 2" />
         </div>
+
         <hr />
         <h2>Configurations</h2>
-        <a href="/Config/Details/5">
-            <img class="config-img" src="#" alt="Duster configs life img" />
-        </a>
-        <a href="/Config/Details/6">
-            <img class="config-img" src="#" alt="Duster configs zen img" />
-        </a>
-        <a href="/Config/Details/7">
-            <img class="config-img" src="#" alt="Duster configs intanse img" />
-        </a>
-        <hr />
 
+        <div class="div-cfg">
+            <span class="span">1/3</span>
+            <a href="/Config/Details/5">
+                <img class="renault-config-img" src="~/App_Images/renault-duster-cfg-life.jpg" alt="Duster-configs-life-img" />
+            </a>
+            <span class="span">2/3</span>
+            <a href="/Config/Details/6">
+                <img class="renault-config-img" src="~/App_Images/renault-duster-cfg-zen.jpg" alt="Duster-configs-zen-img" />
+            </a>
+            <span class="span">3/3</span>
+            <a href="/Config/Details/7">
+                <img class="renault-config-img" src="~/App_Images/renault-duster-cfg-intense.jpg" alt="Duster-configs-intanse-img" />
+            </a>
+            <hr />
+        </div>
     }
+
+
+    @*AUDI RS7*@
+    @*/////////////*@
 
     @if (Model.Id == 3)
     {
+        <div class="div-text">
+            Start price from $56050
+            <br />
+            Crazy and unpretentious or independent and aesthetic?
+            For the Audi RS 7 Sportback, both are correct.
+            Elegant coupe-like design lines combine with the brute force of the V-shaped 'Eight' TFSI.
+            Innovative technology is combined with intuitive dynamics.
+            Enjoy the thrill of having no compromise.
 
+        </div>
+
+        <br />
+        <img class="img-audi" src="~/App_Images/audi-RS-7-view-1.jpg" alt="RS7-view-1" />
+
+        <div>
+            <hr />
+            <h2>Impressive at first glance</h2>
+            <div class="div-text">
+                With its sporty roofline, the Audi RS 7 Sportback will be the center of attention in any environment.
+                Wide "shoulders", clear "eyes", irresistible essence - the spectacular design looks quite convincing,
+                from which side you would not look at it. Characteristic of the RS versions, the wide posture,
+                LED strip and wide grille of the Singleframe radiator stand out as visual indications of outstanding dynamics.
+            </div>
+            <br>
+            <img class="img-audi" src="~/App_Images/audi-RS-7-view-2.jpg" alt="RS7-view-2" />
+        </div>
+
+        <div>
+            <hr />
+            <h2>Interior design</h2>
+
+            <div class="div-text">
+                The Audi RS7 Sportback lets you do this trick at any landing spot.
+                For example, with RS sports seats with Valcona perforated leather upholstery with red honeycomb pattern,
+                embossed RS logo on the backs, and red-edged seat belts,
+                also available for rear seat mounting.
+                The spacious lounge allows you to enjoy sports aesthetics with all your family or friends.
+                This allows you to speak against the routine of the whole company, which can number up to five people.
+                And get away from him in a sporty style.
+
+            </div>
+            <br />
+            <img class="img-audi" src="~/App_Images/audi-RS-7-inside-1.jpg" alt="RS7-inside-1" />
+        </div>
+
+        <hr />
+        <h2>Configurations</h2>
+
+        <div class="div-cfg">
+            <span class="span">1/3</span>
+            <a href="/Config/Details/8">
+                <img class="audi-config-img" src="~/App_Images/audi-RS-7-cfg-base.png" alt="RS7-configs-base-img" />
+            </a>
+            <span class="span">2/3</span>
+            <a href="/Config/Details/10">
+                <img class="audi-config-img" src="~/App_Images/audi-RS-7-cfg-comfort.png" alt="RS7-configs-comfort-img" />
+            </a>
+            <span class="span">3/3</span>
+            <a href="/Config/Details/13">
+                <img class="audi-config-img" src="~/App_Images/audi-RS-7-cfg-premium.png" alt="RS7-configs-premium-img" />
+            </a>
+            <hr />
+        </div>
     }
+
+
+    @*AUDI Q7*@
+    @*/////////////*@
 
     @if (Model.Id == 4)
     {
+        <div class="div-text">
+            Start price from $61520
+            <br>
+            Universal SUV premium.
+            <br>
+            Audi Q7.
+            <br>
+            The latest multimedia and driver assistance systems,
+            an impressive all-wheel-drive experience with intelligent quattro suspension solutions,
+            a powerful design and a spacious interior that seats up to seven people - all with the Audi Q7.
 
+        </div>
+        <br>
+        <img class="img-audi-wide" src="~/App_Images/audi-Q-7-view-1.jpg" alt="Q7-view-1" />
+        <hr />
+        <h2>Colors and wheels</h2>
+        <div class="div-text">
+
+            Design your Q7:
+            <br>
+            In the following gallery we show three colors of paintwork and three wheel options available for the Audi Q7.
+            The Orca Black body version features 21-inch alloy wheels with a ten-spoke Audi Sport range.
+            The Barrique Brown Audi Q7 rides on 22-inch alloy wheels from the Audi Sport five-spoke trapezoidal sleeve.
+            The last combination is a car with a paint finish Matador Red and 22-inch alloy wheels Edge from the range of
+            Audi Sport with five-spoke needles.
+        </div>
+        <br>
+        <img class="img-audi-tall" src="~/App_Images/audi-Q-7-view-2.jpg" alt="Q7-view-2" />
+        <hr />
+        <div>
+            <h2>Interior design</h2>
+            <div class="div-text">
+                Innovative and intuitive multimedia solutions let you continue to use digital technology in the Audi Q7.
+                In front of you is a digital dashboard of the Audi virtual cockpit plus.
+                The 12.3-inch high resolution display of this fully digital dashboard shows vehicle information such as engine speed
+                and speed values. In addition to the classic instrument display, two more modes are available - Dynamik and Sport.
+                Other features can be controlled using the standard MMI Navigation plus media system with the MMI touch panel.
+            </div>
+            <br>
+        </div>
+        <img class="img-audi" src="~/App_Images/audi-Q-7-inside.jpg" alt="Q7-inside-1" />
+        <hr />
+        <h2>Configurations</h2>
+
+        <div class="div-cfg">
+            <span class="span">1/3</span>
+            <a href="/Config/Details/9">
+                <img class="audi-config-img" src="~/App_Images/audi-Q-7-cfg-base.png" alt="Q7-configs-base-img" />
+            </a>
+            <span class="span">2/3</span>
+            <a href="/Config/Details/12">
+                <img class="audi-config-img" src="~/App_Images/audi-Q-7-cfg-comfort.png" alt="Q7-configs-comfort-img" />
+            </a>
+            <span class="span">3/3</span>
+            <a href="/Config/Details/14">
+                <img class="audi-config-img" src="~/App_Images/audi-Q-7-cfg-premium.png" alt="Q7-configs-premium-img" />
+            </a>
+            <hr />
+        </div>
     }
 
     @if (Model.Id == 1 || Model.Id == 2)

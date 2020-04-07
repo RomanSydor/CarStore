@@ -1,7 +1,13 @@
-﻿.small-icon {
+﻿.renault-small-icon {
     margin: 10px;
     height: 310px;
     width: 560px; 
+}
+
+.audi-small-icon {
+    margin: 10px;
+    height: 200px;
+    width: 600px;
 }
 
 /* brand and models */
@@ -18,10 +24,16 @@
 }
 
 .td-model {
+    padding-left: 50px;
     font-size: 50px;
     text-align: center;
 }
 
 .tr-model {
     border-bottom: 1px solid #ffffff;
+}
+
+.div-empty {
+    margin-top: 100px;
+    font-size: 50px;
 }

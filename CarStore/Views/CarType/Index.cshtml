@@ -8,28 +8,40 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <meta name="viewport" content="width=device-width" />
-    <link type="text/css" rel="stylesheet" href="../../Content/ViewsCSS/CarModelIndex.css" /> @*to Add type stiles*@
+    <link type="text/css" rel="stylesheet" href="../../Content/ViewsCSS/CarTypeIndex.css" /> 
     <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
     <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Barlow+Condensed:400,700|Open+Sans:400,700|Oswald:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
 
 </head>
 
 <body>
-
-    <table class="table-model">
-
-
+    <h1>Types</h1>
+    <hr/>
+    <table class="table-type">
+      
         @foreach (var item in Model)
         {
-            <tr class="tr-model">
-                <td class="td-model">
-                    @Html.DisplayFor(modelItem => item.TypeName)
-                </td>
+        <tr class="tr-type">
+           
+            <td class="td-type">
+                @if (item.Id == 1)
+                {
+                    <img src="~/App_Images/sedans-small-img.jpg" alt="Sedans-img" />
+                }
+                @if (item.Id == 2)
+                {
+                    <img src="~/App_Images/crossowers-small-img.jpg" alt="Crossovers-img" />
+                }
+                @if (item.Id == 3)
+                {
+                    <img src="~/App_Images/comercial-small-img.jpg" alt="Commercial-img" />
+                }
+            </td>
 
-                <td class="td-model">
-                    <a href="/PurchaseBuild/CarTypeChoose/@item.Id">View cars</a>
-                </td>
-            </tr>
+            <td class="td-type">
+                <a href="/PurchaseBuild/CarTypeChoose/@item.Id">@item.TypeName</a>
+            </td>
+        </tr>
         }
 
     </table>
