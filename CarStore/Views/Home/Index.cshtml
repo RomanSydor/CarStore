@@ -14,7 +14,7 @@
 
 
     <body class="container-intro">
-        
+
         <div class="content">
             <div>
                 <div class="intro-div">
@@ -28,17 +28,21 @@
             <div class="img-div">
                 <img src="~/App_Images/MainLogo.png" alt="Logo_img" class="logo-img" />
             </div>
-        </div>               
+        </div>
         <br>
-            <h1>Brands info pages</h1>
+        <h1>Brands info pages</h1>
         <br>
         <div>
             <a href="/Brand/Details/1">
-                <img src="~/App_Images/renault-logo.jpg" alt="Renault_img" class="renault-img"/>
+                <img src="~/App_Images/renault-logo.jpg" alt="Renault_img" class="renault-img" />
             </a>
             <a href="/Brand/Details/2">
-                <img src="~/App_Images/audi-logo.png" alt="Audi-img" class="audi-img"/>
+                <img src="~/App_Images/audi-logo.png" alt="Audi-img" class="audi-img" />
             </a>
         </div>
         <br>
+        <a href="/Purchase/Create">(Purchase)</a> @*dev*@
+        <div>
+            @Html.ActionLink("(Back to List)", "Index", "Purchase") @*dev*@
+        </div>
     </body>

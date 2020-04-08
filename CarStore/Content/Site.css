@@ -19,7 +19,7 @@ a {
 
 
 .back-link {
-    font-size: 20px;
+    font-size: 27px;
     text-transform: uppercase;
 }
 
@@ -53,8 +53,7 @@ textarea {
     vertical-align: middle;
     background-color: #000000;
     opacity: 1;
-    margin-top: 50px;
-    margin-bottom: 25vh;
+    margin-bottom: 10vh;
     border-top: 1px solid #ffffff;
 }
 

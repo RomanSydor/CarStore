@@ -75,7 +75,7 @@ namespace CarStore.Controllers
                 return HttpNotFound();
             }
             repo.DeleteConfirmed(id);
-            return RedirectToAction("Index", "Brand");
+            return RedirectToAction("Create", "Purchase");
         }
 
         public ActionResult Delete(int? id)

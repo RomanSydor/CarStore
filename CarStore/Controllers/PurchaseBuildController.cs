@@ -44,5 +44,28 @@ namespace CarStore.Controllers
             _service.CarColorChoose(id);
             return RedirectToAction("Create", "Purchase");
         }
+
+        public ActionResult BackToCarDetails() 
+        {
+            var pur = _service.Create();
+            int id = pur.CarModelId;
+            return RedirectToAction("Details", "CarModel", new { id });
+        }
+
+        public ActionResult BackToConfig() 
+        {
+            var pur = _service.Create();
+            _service.ConfigCancel(pur.ConfigId);
+            int id = pur.CarModelId;
+            return RedirectToAction("Index", "Config", new { id });
+        }
+
+        public ActionResult BackToColor() 
+        {
+            var pur = _service.Create();
+            _service.CarColorCancel(pur.CarColorId);
+            int id = pur.CarModelId;
+            return RedirectToAction("Index", "CarColor");
+        }
     }
 }

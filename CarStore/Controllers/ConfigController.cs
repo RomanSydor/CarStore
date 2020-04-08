@@ -1,5 +1,4 @@
-﻿using CarStore.Models;
-using CarStore.Repositories;
+﻿using CarStore.Repositories;
 using System.Net;
 using System.Web.Mvc;
 

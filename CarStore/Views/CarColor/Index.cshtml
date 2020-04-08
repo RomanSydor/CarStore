@@ -18,23 +18,23 @@
 <body>
 
     <h2>Colors list</h2>
-
+    <a class="back-link" href="/PurchaseBuild/BackToConfig/"> < Back </a>
     <table class="table-cc">
 
         @foreach (var item in Model)
         {
 
-        <tr class="tr-cc">
-            <td class="td-cc">
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td class="td-cc">
-               $@Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td class="td-cc">
-                <a href="/PurchaseBuild/CarColorChoose/@item.Id">Choose</a>
-            </td>
-        </tr>
+            <tr class="tr-cc">
+                <td class="td-cc">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td class="td-cc">
+                    $@Html.DisplayFor(modelItem => item.Price)
+                </td>
+                <td class="td-cc">
+                    <a href="/PurchaseBuild/CarColorChoose/@item.Id">Choose</a>
+                </td>
+            </tr>
         }
     </table>
 

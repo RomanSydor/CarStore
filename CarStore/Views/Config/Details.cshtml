@@ -5,102 +5,115 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+    <head>
+        @Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")
+        <meta name="viewport" content="width=device-width" />
+        <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+        <link type="text/css" rel="stylesheet" href="../../Content/ViewsCSS/ConfigDetails.css" />
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Barlow+Condensed:400,700|Open+Sans:400,700|Oswald:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    </head>
 
-<div>
-    <h2>@Model.Name</h2>
-    <hr />
-    @if (Model.Id == 1)
-    {
-        <img class="img" src="~/App_Images/renault-megane-cfg-life.jpg" alt="config megane life img" />
-    }
-    @if (Model.Id == 3)
-    {
-        <img class="img" src="~/App_Images/renault-megane-cfg-zen.jpg" alt="config megane zen img" />
-    }
-    @if (Model.Id == 4)
-    {
-        <img class="img" src="~/App_Images/renault-megane-cfg-intense.jpg" alt="config megane intanse img" />
-    }
-    @if (Model.Id == 5)
-    {
-        <img class="img" src="~/App_Images/renault-duster-cfg-life.jpg" alt="config duster life img" />
-    }
-    @if (Model.Id == 6)
-    {
-        <img class="img" src="~/App_Images/renault-duster-cfg-zen.jpg" alt="config duster zen img" />
-    }
-    @if (Model.Id == 7)
-    {
-        <img class="img" src="~/App_Images/renault-duster-cfg-intense.jpg" alt="config duster intanse img" />
-    }
-    @if (Model.Id == 8)
-    {
-        <img class="img" src="~/App_Images/audi-RS-7-cfg-base.png" alt="config rs7 base img" />
-    }
-    @if (Model.Id == 9)
-    {
-        <img class="img" src="~/App_Images/audi-Q-7-cfg-base.png" alt="config q7 base img" />
-    }
-    @if (Model.Id == 10)
-    {
-        <img class="img" src="~/App_Images/audi-RS-7-cfg-comfort.png" alt="config rs7 comfort img" />
-    }
-    @if (Model.Id == 12)
-    {
-        <img class="img" src="~/App_Images/audi-Q-7-cfg-comfort.png" alt="config q7 comfort img" />
-    }
-    @if (Model.Id == 13)
-    {
-        <img class="img" src="~/App_Images/audi-RS-7-cfg-premium.png" alt="config rs7 premium img" />
-    }
-    @if (Model.Id == 14)
-    {
-        <img class="img" src="~/App_Images/audi-Q-7-cfg-premium.png" alt="config q7 premium img" />
-    }
-    <dl>
-        <dt>
-            @Html.DisplayNameFor(model => model.Name):
-        </dt>
+    <body>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <br>
-        <dt>
-            @Html.DisplayNameFor(model => model.Transmission):
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Transmission)
-        </dd>
-        <br>
-        <dt>
-            @Html.DisplayNameFor(model => model.EngineType):
-        </dt>
+        <h1>Details</h1>
 
-        <dd>
-            @Html.DisplayFor(model => model.EngineType)
-        </dd>
-        <br>
-        <dt>
-            @Html.DisplayNameFor(model => model.EngineVolume):
-        </dt>
+        <div>
+            <h2>@Model.Name</h2>
+            <hr />
+            @if (Model.Id == 1)
+            {
+                <img class="img-cfg-det-renault" src="~/App_Images/renault-megane-cfg-life.jpg" alt="config megane life img" />
+            }
+            @if (Model.Id == 3)
+            {
+                <img class="img-cfg-det-renault" src="~/App_Images/renault-megane-cfg-zen.jpg" alt="config megane zen img" />
+            }
+            @if (Model.Id == 4)
+            {
+                <img class="img-cfg-det-renault" src="~/App_Images/renault-megane-cfg-intense.jpg" alt="config megane intanse img" />
+            }
+            @if (Model.Id == 5)
+            {
+                <img class="img-cfg-det-renault" src="~/App_Images/renault-duster-cfg-life.jpg" alt="config duster life img" />
+            }
+            @if (Model.Id == 6)
+            {
+                <img class="img-cfg-det-renault" src="~/App_Images/renault-duster-cfg-zen.jpg" alt="config duster zen img" />
+            }
+            @if (Model.Id == 7)
+            {
+                <img class="img-cfg-det-renault" src="~/App_Images/renault-duster-cfg-intense.jpg" alt="config duster intanse img" />
+            }
+            @if (Model.Id == 8)
+            {
+                <img class="img-cfg-det-audi" src="~/App_Images/audi-RS-7-cfg-base.png" alt="config rs7 base img" />
+            }
+            @if (Model.Id == 9)
+            {
+                <img class="img-cfg-det-audi" src="~/App_Images/audi-Q-7-cfg-base.png" alt="config q7 base img" />
+            }
+            @if (Model.Id == 10)
+            {
+                <img class="img-cfg-det-audi" src="~/App_Images/audi-RS-7-cfg-comfort.png" alt="config rs7 comfort img" />
+            }
+            @if (Model.Id == 12)
+            {
+                <img class="img-cfg-det-audi" src="~/App_Images/audi-Q-7-cfg-comfort.png" alt="config q7 comfort img" />
+            }
+            @if (Model.Id == 13)
+            {
+                <img class="img-cfg-det-audi" src="~/App_Images/audi-RS-7-cfg-premium.png" alt="config rs7 premium img" />
+            }
+            @if (Model.Id == 14)
+            {
+                <img class="img-cfg-det-audi" src="~/App_Images/audi-Q-7-cfg-premium.png" alt="config q7 premium img" />
+            }
+            <dl>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name):
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.EngineVolume)
-        </dd>
-        <br>
-        <dt>
-            @Html.DisplayNameFor(model => model.WheelSize):
-        </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+                <br>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Transmission):
+                </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.WheelSize)
-        </dd>
+                <dd>
+                    @Html.DisplayFor(model => model.Transmission)
+                </dd>
+                <br>
+                <dt>
+                    @Html.DisplayNameFor(model => model.EngineType):
+                </dt>
 
-    </dl>
-</div>
-@*<p>
-    @Html.ActionLink("Back to List", "Index")
-</p>*@
+                <dd>
+                    @Html.DisplayFor(model => model.EngineType)
+                </dd>
+                <br>
+                <dt>
+                    @Html.DisplayNameFor(model => model.EngineVolume):
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.EngineVolume)
+                </dd>
+                <br>
+                <dt>
+                    @Html.DisplayNameFor(model => model.WheelSize):
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.WheelSize)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            <a class="back-link" href="/CarModel/Details/@Model.CarModelId"> < Back to model</a>
+        </p>
+    </body>

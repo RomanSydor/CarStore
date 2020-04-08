@@ -16,33 +16,35 @@
 
 <body>
     <h1>Types</h1>
-    <hr/>
+    <hr />
+    <a class="back-link" href="/Brand/Index"> < Back to brands</a>
     <table class="table-type">
-      
+
         @foreach (var item in Model)
         {
-        <tr class="tr-type">
-           
-            <td class="td-type">
-                @if (item.Id == 1)
-                {
-                    <img src="~/App_Images/sedans-small-img.jpg" alt="Sedans-img" />
-                }
-                @if (item.Id == 2)
-                {
-                    <img src="~/App_Images/crossowers-small-img.jpg" alt="Crossovers-img" />
-                }
-                @if (item.Id == 3)
-                {
-                    <img src="~/App_Images/comercial-small-img.jpg" alt="Commercial-img" />
-                }
-            </td>
+            <tr class="tr-type">
 
-            <td class="td-type">
-                <a href="/PurchaseBuild/CarTypeChoose/@item.Id">@item.TypeName</a>
-            </td>
-        </tr>
+                <td class="td-type">
+                    @if (item.Id == 1)
+                    {
+                        <img src="~/App_Images/sedans-small-img.jpg" alt="Sedans-img" />
+                    }
+                    @if (item.Id == 2)
+                    {
+                        <img src="~/App_Images/crossowers-small-img.jpg" alt="Crossovers-img" />
+                    }
+                    @if (item.Id == 3)
+                    {
+                        <img src="~/App_Images/comercial-small-img.jpg" alt="Commercial-img" />
+                    }
+                </td>
+
+                <td class="td-type">
+                    <a href="/PurchaseBuild/CarTypeChoose/@item.Id">@item.TypeName</a>
+                </td>
+            </tr>
         }
 
     </table>
+
 </body>

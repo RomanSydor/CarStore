@@ -40,6 +40,18 @@ namespace CarStore.Services
             _purchase.CarColorId = id.Value;
         }
 
+        public void CarColorCancel(int? id)
+        {
+            CarColor carColor;
+            if (_purchase == null)
+            {
+                _purchase = new Purchase();
+            }
+            carColor = db.CarColors.Find(id);
+            _purchase.Price -= carColor.Price;
+            _purchase.CarColorId = 0;
+        }
+
         public void CarModelChoose(int? id)
         {
             if (_purchase == null)
@@ -60,6 +72,18 @@ namespace CarStore.Services
             config = db.Configs.Find(id);
             _purchase.Price += config.Price;
             _purchase.ConfigId = id.Value;
+        }
+
+        public void ConfigCancel(int? id) 
+        {
+            Config config;
+            if (_purchase == null)
+            {
+                _purchase = new Purchase();
+            }
+            config = db.Configs.Find(id);
+            _purchase.Price -= config.Price;
+            _purchase.ConfigId = 0;
         }
 
         public Purchase Create()

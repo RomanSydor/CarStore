@@ -1,4 +1,9 @@
-﻿.img {
-    height: 250px;
-    width: 400px;
+﻿.img-cfg-det-audi {
+    height: 200px;
+    width: 600px;
+}
+
+.img-cfg-det-renault {
+    height: 380px;
+    width: 600px;
 }
