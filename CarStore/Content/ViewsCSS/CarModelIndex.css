@@ -1,7 +1,7 @@
 ﻿.renault-small-icon {
     margin: 10px;
-    height: 310px;
-    width: 560px; 
+    height: 295px;
+    width: 550px;
 }
 
 .audi-small-icon {
@@ -33,6 +33,5 @@
 }
 
 .div-empty {
-    margin-top: 100px;
     font-size: 50px;
 }

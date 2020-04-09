@@ -24,12 +24,12 @@
     </div>
     <hr />
     <h2>@Model.Name</h2>
-    @if (Model.Id == 1 || Model.Id == 2)
+    @if (Model.BrandId == 1)
     {
         <a class="back-link" href="/CarModel/Index/1"> < Back to cars</a>
     }
 
-    @if (Model.Id == 3 || Model.Id == 4)
+    @if (Model.BrandId == 2)
     {
         <a class="back-link" href="/CarModel/Index/2"> < Back to cars</a>
     }
@@ -42,7 +42,7 @@
     {
 
         <div class="div-text">
-            Start price from $15 000
+            Start price from $15 070
             <br />
         </div>
         <br>
@@ -95,7 +95,7 @@
     {
 
         <div class="div-text">
-            Start price from $15 200
+            Start price from $15 210
             <br />
         </div>
         <br>
@@ -272,6 +272,170 @@
             </a>
             <hr />
         </div>
+    }
+
+
+    @*//////////////
+        RENAULT KADJAR
+        //////////////*@
+
+    @if (Model.Id == 5)
+    {
+        <div class="div-text">
+            Start price from $19 370
+            <br>
+            Crossover with a bright temperament
+            <br>
+            Athletic and expressive physique, stylish and unique looks are all about the new Renault KADJAR crossover. Clear lines, chrome elements of the radiator grille, a new form of fog lamp trim emphasize individuality. Lighting devices with LED technology, like magnets, are eye-catching. Fully LED headlamps and LED running lights with a corporate outline have also received integrated turn indicators.
+            <br>
+            The new KADJAR has a stunning look, you'll be proud of your car
+            <br />
+        </div>
+        <br>
+        <img class="img-renault" src="~/App_Images/renault-kadjar-view-1.jpg" alt="Kadjar view" />
+
+        <hr />
+        <div>
+            <h2>Interior design</h2>
+            <img class="img-renault" src="~/App_Images/renault-kadjar-inside-1.jpg" alt="Kadjar inside 1" />
+            <hr />
+            <div class="div-text">
+                Elegance and comfort.
+                Immerse yourself in the warm interior of the KADJAR Black Edition with stylish Alcantara® seat upholstery. Enjoy the comfort of heated front seats, adjustable seat and armrests, and experience the powerful sound of your favorite music with the Bose® Sound System.
+
+                The black interior trim highlights the chrome details and numerous red stitching in your car.
+
+            </div>
+            <hr />
+            <img class="img-renault" src="~/App_Images/renault-kadjar-inside-2.jpg" alt="Kadjar inside 2" />
+        </div>
+
+        <hr />
+        <h2>Configurations</h2>
+
+        <div class="div-cfg">
+            <span class="span">1/3</span>
+            <a href="/Config/Details/18">
+                <img class="renault-config-img" src="~/App_Images/renault-kadjar-cfg-life.jpg" alt="Kadjar-configs-life-img" />
+            </a>
+            <span class="span">2/3</span>
+            <a href="/Config/Details/19">
+                <img class="renault-config-img" src="~/App_Images/renault-kadjar-cfg-zen.jpg" alt="Kadjar-configs-zen-img" />
+            </a>
+            <span class="span">3/3</span>
+            <a href="/Config/Details/20">
+                <img class="renault-config-img" src="~/App_Images/renault-kadjar-cfg-intense.jpg" alt="Kadjar-configs-intanse-img" />
+            </a>
+        </div>
+        <hr />
+
+    }
+
+    @*//////////////
+        RENAULT KOLEOS
+        //////////////*@
+
+    @if (Model.Id == 6)
+    {
+        <div class="div-text">
+            Start price from $29 850
+            <br />
+            The crossover is both elegant and powerful
+            <br>
+            Its impressive design will simply astound you
+            The dynamic look, sporty and solid profile,
+            chrome lines and signature C-Shape daytime running LED lights create
+            a unique and insightful Renault Koleos look and make everyone follow.
+            Sit down and steer confidently!
+        </div>
+        <br>
+        <img class="img-renault-wide" src="~/App_Images/renault-koleos-view-1.jpg" alt="koleos view" />
+
+        <hr />
+        <div>
+            <h2>Interior design</h2>
+            <img class="img-renault" src="~/App_Images/renault-koleos-inside-1.jpg" alt="koleos inside 1" />
+            <hr />
+            <div class="div-text">
+                Get comfortable
+                The new Renault KOLEOS invites you into the world of comfort.
+                Spacious interior, numerous storage compartments,
+                heated all passenger seats, customizable comfortable interior lighting, panoramic sunroof ...
+                Travel first class.
+
+            </div>
+            <hr />
+            <img class="img-renault" src="~/App_Images/renault-koleos-inside-2.jpg" alt="koleos inside 2" />
+        </div>
+
+        <hr />
+        <h2>Configurations</h2>
+
+        <div class="div-cfg">
+            <span class="span">1/3</span>
+            <a href="/Config/Details/21">
+                <img class="renault-koleos-config-img" src="~/App_Images/renault-koleos-cfg-life.jpg" alt="koleos-configs-life-img" />
+            </a>
+            <span class="span">2/3</span>
+            <a href="/Config/Details/22">
+                <img class="renault-koleos-config-img" src="~/App_Images/renault-koleos-cfg-zen.jpg" alt="koleos-configs-zen-img" />
+            </a>
+            <span class="span">3/3</span>
+            <a href="/Config/Details/23">
+                <img class="renault-koleos-config-img" src="~/App_Images/renault-koleos-cfg-intense.jpg" alt="koleos-configs-intanse-img" />
+            </a>
+        </div>
+        <hr />
+    }
+
+    @*//////////////
+        RENAULT LOGAN
+        //////////////*@
+
+    @if (Model.Id == 7)
+    {
+        <div class="div-text">
+            Start price from $11 460
+            <br />
+            
+        </div>
+
+        <br>
+        <img class="img-renault-wide" src="~/App_Images/renault-logan-view-1.jpg" alt="koleos view" />
+
+        <hr />
+        <div>
+            <h2>Interior design</h2>
+            <img class="img-renault" src="~/App_Images/renault-logan-inside-1.jpg" alt="koleos inside 1" />
+            <hr />
+
+            <div class="div-text">
+                
+
+            </div>
+
+            <hr />
+            <img class="img-renault" src="~/App_Images/renault-logan-inside-2.jpg" alt="koleos inside 2" />
+        </div>
+
+        <hr />
+        <h2>Configurations</h2>
+
+        <div class="div-cfg">
+            <span class="span">1/3</span>
+            <a href="/Config/Details/15">
+                <img class="renault-config-img" src="~/App_Images/renault-logan-cfg-life.jpg" alt="logan-configs-life-img" />
+            </a>
+            <span class="span">2/3</span>
+            <a href="/Config/Details/16">
+                <img class="renault-config-img" src="~/App_Images/renault-logan-cfg-life-pl.jpg" alt="logan-configs-life+-img" />
+            </a>
+            <span class="span">3/3</span>
+            <a href="/Config/Details/17">
+                <img class="renault-config-img" src="~/App_Images/renault-logan-cfg-zen.jpg" alt="logan-configs-life-img" />
+            </a>
+        </div>
+        <hr />
     }
 
 </body>        

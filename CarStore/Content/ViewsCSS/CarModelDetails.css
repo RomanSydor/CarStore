@@ -10,6 +10,12 @@
     margin-left: 200px;
 }
 
+.img-renault-wide {
+    height: 620px;
+    width: 1100px;
+    margin-left: 155px;
+}
+
 
 .img-audi-wide {
     height: 500px;
@@ -38,6 +44,14 @@
 
 .renault-config-img {
     height: 250px;
+    width: 400px;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 35px;
+}
+
+.renault-koleos-config-img {
+    height: 290px;
     width: 400px;
     justify-content: space-between;
     margin-left: 15px;
