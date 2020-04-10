@@ -31,7 +31,9 @@ namespace CarStore.Repositories
                 .Where(r => r.BrandId == p.BrandId
                 && r.CarTypeId == p.CarTypeId);
 
-            return result.ToList();
+            return result
+                .ToList()
+                .OrderBy(n => n.Name);
         }
 
         protected void Dispose(bool disposing)
