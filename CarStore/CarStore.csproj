@@ -200,6 +200,13 @@
     <Content Include="App_Data\CarStoreDb_log.ldf">
       <DependentUpon>CarStoreDb.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Images\audi-A-4-cfg-base.png" />
+    <Content Include="App_Images\audi-A-4-cfg-comfort.png" />
+    <Content Include="App_Images\audi-A-4-cfg-premium.png" />
+    <Content Include="App_Images\audi-A-4-inside-1.jpeg" />
+    <Content Include="App_Images\audi-A-4-small-icon.png" />
+    <Content Include="App_Images\audi-A-4-view-1.jpg" />
+    <Content Include="App_Images\audi-A-4-view-2.jpg" />
     <Content Include="App_Images\audi-A-6-cfg-base.png" />
     <Content Include="App_Images\audi-A-6-cfg-comfort.png" />
     <Content Include="App_Images\audi-A-6-cfg-premium.png" />
@@ -286,13 +293,13 @@
     <Content Include="App_Images\renault-logan-inside-2.jpg" />
     <Content Include="App_Images\renault-logan-small-icon.jpg" />
     <Content Include="App_Images\renault-logan-view-1.jpg" />
-    <Content Include="App_Images\renault-loganmvc-cfg-base.jpg" />
-    <Content Include="App_Images\renault-loganmvc-cfg-stepwat-zen.jpg" />
-    <Content Include="App_Images\renault-loganmvc-cfg-zen.jpg" />
-    <Content Include="App_Images\renault-loganmvc-inside-1.jpg" />
-    <Content Include="App_Images\renault-loganmvc-inside-2.jpg" />
-    <Content Include="App_Images\renault-loganmvc-small-icon.jpg" />
-    <Content Include="App_Images\renault-loganmvc-view-1.jpg" />
+    <Content Include="App_Images\renault-loganmcv-cfg-base.jpg" />
+    <Content Include="App_Images\renault-loganmcv-cfg-stepwat-zen.jpg" />
+    <Content Include="App_Images\renault-loganmcv-cfg-zen.jpg" />
+    <Content Include="App_Images\renault-loganmcv-inside-1.jpg" />
+    <Content Include="App_Images\renault-loganmcv-inside-2.jpg" />
+    <Content Include="App_Images\renault-loganmcv-small-icon.jpg" />
+    <Content Include="App_Images\renault-loganmcv-view-1.jpg" />
     <Content Include="App_Images\renault-megane-cfg-intense.jpg" />
     <Content Include="App_Images\renault-megane-cfg-life.jpg" />
     <Content Include="App_Images\renault-megane-cfg-zen.jpg" />
