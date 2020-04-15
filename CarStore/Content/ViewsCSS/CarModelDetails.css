@@ -64,6 +64,12 @@
     justify-content: space-between;
 }
 
+.audi-e-tron-config-img {
+    height: 250px;
+    width: 440px;
+    justify-content: space-between;
+}
+
 .div-cfg {
     display: flex;
     justify-content: space-between;

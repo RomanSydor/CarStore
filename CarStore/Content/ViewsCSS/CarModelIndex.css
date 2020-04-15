@@ -10,6 +10,11 @@
     width: 640px;
 }
 
+.audi-e-tron-small-icon {
+    margin: 10px;
+    height: 250px;
+    width: 440px;
+}
 /* brand and models */
 .table-model {
     width: 100%;

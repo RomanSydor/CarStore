@@ -202,6 +202,22 @@
             {
                 <img class="img-cfg-det-audi" src="~/App_Images/audi-A-4-cfg-premium.png" alt="config a4 premium img" />
             }
+            @if (Model.Id == 53)
+            {
+                <img class="img-cfg-det-renault" src="~/App_Images/renault-kangoo-ze-cfg-express.jpg" alt="config kangooze express img" />
+            }
+            @if (Model.Id == 54)
+            {
+                <img class="img-cfg-det-renault" src="~/App_Images/renault-kangoo-ze-cfg-maxi.jpg" alt="config kangooze maxi img" />
+            }
+            @if (Model.Id == 55)
+            {
+                <img class="img-cfg-det-renault" src="~/App_Images/renault-kangoo-ze-cfg-maxi-pass.jpg" alt="config kangooze maxi pass img" />
+            }
+            @if (Model.Id == 56)
+            {
+                <img class="img-cfg-det-audi-e-tron" src="~/App_Images/audi-e-tron-cfg-e-tron.png" alt="config e-tron e-tron img" />
+            }
 
             <dl>
                 <dt>
@@ -228,13 +244,26 @@
                     @Html.DisplayFor(model => model.EngineType)
                 </dd>
                 <br>
-                <dt>
-                    @Html.DisplayNameFor(model => model.EngineVolume):
-                </dt>
+                @if (Model.Id == 53 || Model.Id == 54 || Model.Id == 55 || Model.Id == 56)
+                {
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EngineVolume):
+                    </dt>
 
-                <dd>
-                    @Html.DisplayFor(model => model.EngineVolume)
-                </dd>
+                    <dd>
+                        @Html.DisplayFor(model => model.EngineVolume) km
+                    </dd>
+                }
+                else
+                {
+                    <dt>
+                        @Html.DisplayNameFor(model => model.EngineVolume):
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.EngineVolume)
+                    </dd>
+                }
                 <br>
                 <dt>
                     @Html.DisplayNameFor(model => model.WheelSize):

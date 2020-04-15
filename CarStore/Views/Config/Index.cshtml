@@ -57,9 +57,18 @@
         <td class="td-cc">
             @Html.DisplayFor(modelItem => item.EngineType)
         </td>
-        <td class="td-cc">
-            @Html.DisplayFor(modelItem => item.EngineVolume)
-        </td>
+        @if (item.Id == 53 || item.Id == 54 || item.Id == 55 || item.Id == 56)
+        {
+            <td class="td-cc">
+                @Html.DisplayFor(modelItem => item.EngineVolume) km
+            </td>
+        }
+        else
+        {
+            <td class="td-cc">
+                @Html.DisplayFor(modelItem => item.EngineVolume)
+            </td>
+        }
         <td class="td-cc">
             @Html.DisplayFor(modelItem => item.WheelSize)
         </td>

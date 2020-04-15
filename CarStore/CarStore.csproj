@@ -224,6 +224,11 @@
     <Content Include="App_Images\audi-A-8-small-icon.png" />
     <Content Include="App_Images\audi-A-8-view-1.jpg" />
     <Content Include="App_Images\audi-A-8-view-2.jpg" />
+    <Content Include="App_Images\audi-e-tron-cfg-e-tron.png" />
+    <Content Include="App_Images\audi-e-tron-inside-1.jpeg" />
+    <Content Include="App_Images\audi-e-tron-small-icon.png.jpg" />
+    <Content Include="App_Images\audi-e-tron-view-1.jpg" />
+    <Content Include="App_Images\audi-e-tron-view-2.jpg" />
     <Content Include="App_Images\audi-logo.png" />
     <Content Include="App_Images\audi-Q-2-cfg-base.png" />
     <Content Include="App_Images\audi-Q-2-cfg-comfort.png" />
@@ -265,6 +270,7 @@
     <Content Include="App_Images\audi-Q-8-view-2.jpg" />
     <Content Include="App_Images\comercial-small-img.jpg" />
     <Content Include="App_Images\crossowers-small-img.jpg" />
+    <Content Include="App_Images\electric-small-img.jpg" />
     <Content Include="App_Images\renault-duster-cfg-intense.jpg" />
     <Content Include="App_Images\renault-duster-cfg-life.jpg" />
     <Content Include="App_Images\renault-duster-cfg-zen.jpg" />
@@ -279,6 +285,13 @@
     <Content Include="App_Images\renault-kadjar-inside-2.jpg" />
     <Content Include="App_Images\renault-kadjar-small-icon.jpg" />
     <Content Include="App_Images\renault-kadjar-view-1.jpg" />
+    <Content Include="App_Images\renault-kangoo-ze-cfg-express.jpg" />
+    <Content Include="App_Images\renault-kangoo-ze-cfg-maxi-pass.jpg" />
+    <Content Include="App_Images\renault-kangoo-ze-cfg-maxi.jpg" />
+    <Content Include="App_Images\renault-kangoo-ze-inside-1.jpg" />
+    <Content Include="App_Images\renault-kangoo-ze-small-icon.jpg" />
+    <Content Include="App_Images\renault-kangoo-ze-view-1.jpg" />
+    <Content Include="App_Images\renault-kangoo-ze-view-2.jpg" />
     <Content Include="App_Images\renault-koleos-cfg-intense.jpg" />
     <Content Include="App_Images\renault-koleos-cfg-life.jpg" />
     <Content Include="App_Images\renault-koleos-cfg-zen.jpg" />
