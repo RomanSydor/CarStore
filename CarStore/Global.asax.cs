@@ -20,6 +20,7 @@ namespace CarStore
 
             NinjectModule registrations = new NinjectRegistrations();
             var kernel = new StandardKernel(registrations);
+            kernel.Unbind<ModelValidatorProvider>(); // disabling of default validation
             DependencyResolver.SetResolver(new NinjectDependencyResolver(kernel));
         }
     }

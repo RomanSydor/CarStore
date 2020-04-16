@@ -50,13 +50,15 @@ namespace CarStore.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Customer,Phone,Date,BrandId,CarModelId,ConfigId,CarColorId")] Purchase purchase)
+        public ActionResult Create([Bind(Include = "Id,Phone,Date,BrandId,CarModelId,ConfigId,CarColorId,FirstName,LastName,Email")] Purchase purchase)
         {
             if (ModelState.IsValid)
             {
                 var pur = _service.Create();
                 pur.Phone = purchase.Phone;
-                pur.Customer = purchase.Customer;
+                pur.FirstName = purchase.FirstName;
+                pur.LastName = purchase.LastName;
+                pur.Email = purchase.Email;
                 repo.Create(pur);
                 return RedirectToAction("PurchaseConfirm", new { pur.Id });
             }

@@ -170,6 +170,14 @@
     <Compile Include="Migrations\202004010711164_MigrateDB4.designer.cs">
       <DependentUpon>202004010711164_MigrateDB4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004151457132_MigrateDB5.cs" />
+    <Compile Include="Migrations\202004151457132_MigrateDB5.designer.cs">
+      <DependentUpon>202004151457132_MigrateDB5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004160652379_MigrateDB6.cs" />
+    <Compile Include="Migrations\202004160652379_MigrateDB6.designer.cs">
+      <DependentUpon>202004160652379_MigrateDB6.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\CarModel.cs" />
@@ -268,7 +276,6 @@
     <Content Include="App_Images\audi-Q-8-small-icon.png" />
     <Content Include="App_Images\audi-Q-8-view-1.jpg" />
     <Content Include="App_Images\audi-Q-8-view-2.jpg" />
-    <Content Include="App_Images\comercial-small-img.jpg" />
     <Content Include="App_Images\crossowers-small-img.jpg" />
     <Content Include="App_Images\electric-small-img.jpg" />
     <Content Include="App_Images\renault-duster-cfg-intense.jpg" />
@@ -414,6 +421,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004010711164_MigrateDB4.resx">
       <DependentUpon>202004010711164_MigrateDB4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004151457132_MigrateDB5.resx">
+      <DependentUpon>202004151457132_MigrateDB5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004160652379_MigrateDB6.resx">
+      <DependentUpon>202004160652379_MigrateDB6.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

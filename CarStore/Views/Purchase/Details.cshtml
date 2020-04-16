@@ -22,11 +22,19 @@
             <div class="div-dl">
                 <dl class="dl">
                     <dt>
-                        @Html.DisplayNameFor(model => model.Customer):
+                        @Html.DisplayNameFor(model => model.FirstName):
                     </dt>
 
                     <dd>
-                        @Html.DisplayFor(model => model.Customer)
+                        @Html.DisplayFor(model => model.FirstName)
+                    </dd>
+                    <hr />
+                    <dt>
+                        @Html.DisplayNameFor(model => model.LastName):
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.LastName)
                     </dd>
                     <hr />
                     <dt>
@@ -35,6 +43,14 @@
 
                     <dd>
                         @Html.DisplayFor(model => model.Phone)
+                    </dd>
+                    <hr />
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Email):
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Email)
                     </dd>
                     <hr />
                     <dt>
