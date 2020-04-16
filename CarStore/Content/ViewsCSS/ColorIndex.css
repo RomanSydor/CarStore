@@ -1,2 +1,6 @@
-﻿body {
+﻿.color-img{
+    height: 135px;
+    width: 135px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

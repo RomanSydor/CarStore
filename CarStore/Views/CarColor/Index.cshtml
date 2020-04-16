@@ -11,7 +11,7 @@
     @Scripts.Render("~/bundles/modernizr")
     <meta name="viewport" content="width=device-width" />
     <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
-    <link type="text/css" rel="stylesheet" href="../../Content/ViewsCSS/CarColorIndex.css" />
+    <link type="text/css" rel="stylesheet" href="../../Content/ViewsCSS/ColorIndex.css" />
     <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Barlow+Condensed:400,700|Open+Sans:400,700|Oswald:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
 </head>
 
@@ -24,17 +24,59 @@
         @foreach (var item in Model)
         {
 
-            <tr class="tr-cc">
+        <tr class="tr-cc">
+            @if (item.Id == 1)
+            {
                 <td class="td-cc">
-                    @Html.DisplayFor(modelItem => item.Name)
+                    <img class="color-img" src="~/App_Images/color-black-img.jpg" alt="black-color-img" />
                 </td>
+            }
+            @if (item.Id == 2)
+            {
                 <td class="td-cc">
-                    $@Html.DisplayFor(modelItem => item.Price)
+                    <img class="color-img" src="~/App_Images/color-white-img.jpg" alt="white-color-img" />
                 </td>
+            }
+            @if (item.Id == 6)
+            {
                 <td class="td-cc">
-                    <a href="/PurchaseBuild/CarColorChoose/@item.Id">Choose</a>
+                    <img class="color-img" src="~/App_Images/color-red-tango-img.jpg" alt="red-tango-color-img" />
                 </td>
-            </tr>
+            }
+            @if (item.Id == 7)
+            {
+                <td class="td-cc">
+                    <img class="color-img" src="~/App_Images/color-sky-blue-img.jpg" alt="sky-blue-color-img" />
+                </td>
+            }
+            @if (item.Id == 8)
+            {
+                <td class="td-cc">
+                    <img class="color-img" src="~/App_Images/color-emerald-green-img.jpg" alt="emarald-green-color-img" />
+                </td>
+            }
+            @if (item.Id == 9)
+            {
+                <td class="td-cc">
+                    <img class="color-img" src="~/App_Images/color-space-blue-img.jpg" alt="space-blue-color-img" />
+                </td>
+            }
+            @if (item.Id == 10)
+            {
+                <td class="td-cc">
+                    <img class="color-img" src="~/App_Images/color-red-sevilla-img.jpg" alt="red-sevilla-color-img" />
+                </td>
+            }
+            <td class="td-cc">
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td class="td-cc">
+                $@Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td class="td-cc">
+                <a href="/PurchaseBuild/CarColorChoose/@item.Id">Choose</a>
+            </td>
+        </tr>
         }
     </table>
 

@@ -276,6 +276,13 @@
     <Content Include="App_Images\audi-Q-8-small-icon.png" />
     <Content Include="App_Images\audi-Q-8-view-1.jpg" />
     <Content Include="App_Images\audi-Q-8-view-2.jpg" />
+    <Content Include="App_Images\color-black-img.jpg" />
+    <Content Include="App_Images\color-emerald-green-img.jpg" />
+    <Content Include="App_Images\color-red-sevilla-img.jpg" />
+    <Content Include="App_Images\color-red-tango-img.jpg" />
+    <Content Include="App_Images\color-sky-blue-img.jpg" />
+    <Content Include="App_Images\color-space-blue-img.jpg" />
+    <Content Include="App_Images\color-white-img.jpg" />
     <Content Include="App_Images\crossowers-small-img.jpg" />
     <Content Include="App_Images\electric-small-img.jpg" />
     <Content Include="App_Images\renault-duster-cfg-intense.jpg" />
