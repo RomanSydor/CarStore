@@ -1,8 +1,16 @@
-﻿@model IEnumerable<CarStore.Models.Purchase>
+﻿@using CarStore.Repositories
+@using CarStore.Services
+@model IEnumerable<CarStore.Models.Purchase>
 
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    PurchaseService purchaseService = new PurchaseService();
+    BrandRepository brandRepository = new BrandRepository();
+    CarTypeRepository carTypeRepository = new CarTypeRepository();
+    CarModelRepository carModelRepository = new CarModelRepository(purchaseService);
+    ConfigRepository configRepository = new ConfigRepository();
+    CarColorRepository carColorRepository = new CarColorRepository();
 }
 
 <h2>Index</h2>
@@ -28,19 +36,19 @@
             @Html.DisplayNameFor(model => model.Date)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.BrandId)
+            Brand
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CarTypeId)
+            Type
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CarModelId)
+            Model
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ConfigId)
+            Configuration
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CarColorId)
+            Color
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Price)
@@ -48,47 +56,48 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.FirstName)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.LastName)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Phone)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Email)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Date)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.BrandId)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.CarTypeId)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.CarModelId)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.ConfigId)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.CarColorId)
-    </td>
-    <td>
-        $@Html.DisplayFor(modelItem => item.Price)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-    </td>
-</tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @brandRepository.GetBrandName(item.BrandId)
+            </td>
+            <td>
+                @carTypeRepository.GetCarTypeName(item.CarTypeId)  
+            </td>
+            <td>
+                @carModelRepository.GetCarModelName(item.CarModelId)
+            </td>
+            <td>
+                @configRepository.GetConfigName(item.ConfigId)
+            </td>
+            <td>
+                @carColorRepository.GetCarColorName(item.CarColorId)
+            </td>
+            <td>
+                $@Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
 
 </table>

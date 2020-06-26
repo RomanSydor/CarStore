@@ -20,6 +20,12 @@ namespace CarStore.Repositories
             return db.CarColors.ToList();
         }
 
+        public string GetCarColorName(int id) 
+        {
+            var color = Details(id);
+            var colorName = color.Name;
+            return colorName;
+        }
         protected void Dispose(bool disposing)
         {
             if (disposing)

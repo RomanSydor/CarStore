@@ -36,6 +36,13 @@ namespace CarStore.Repositories
                 .OrderBy(n => n.Name);
         }
 
+        public string GetCarModelName(int id) 
+        {
+            var model = Details(id);
+            var modelName = model.Name;
+            return modelName;
+        }
+
         protected void Dispose(bool disposing)
         {
             if (disposing)

@@ -15,6 +15,13 @@ namespace CarStore.Repositories
             return db.CarTypes.ToList();
         }
 
+        public string GetCarTypeName(int id) 
+        {
+            var type = db.CarTypes.FirstOrDefault(t => t.Id == id);
+            var typeName = type.TypeName;
+            return typeName;
+        }
+
         protected void Dispose(bool disposing)
         {
             if (disposing)

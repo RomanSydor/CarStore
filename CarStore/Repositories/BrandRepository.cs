@@ -23,6 +23,13 @@ namespace CarStore.Repositories
             
         }
 
+        public string GetBrandName(int id)
+        {
+            var b = Details(id);
+            var bName = b.Name;
+            return bName;
+        }
+
         protected void Dispose(bool disposing)
         {
             if (disposing)

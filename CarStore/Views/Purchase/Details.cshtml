@@ -1,122 +1,130 @@
-﻿@model CarStore.Models.Purchase
+﻿@using CarStore.Repositories
+@using CarStore.Services
+@model CarStore.Models.Purchase
 
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    PurchaseService purchaseService = new PurchaseService();
+    BrandRepository brandRepository = new BrandRepository();
+    CarTypeRepository carTypeRepository = new CarTypeRepository();
+    CarModelRepository carModelRepository = new CarModelRepository(purchaseService);
+    ConfigRepository configRepository = new ConfigRepository();
+    CarColorRepository carColorRepository = new CarColorRepository();
 }
 
-    <head>
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
-        <meta name="viewport" content="width=device-width" />
-        <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
-        <link type="text/css" rel="stylesheet" href="../../Content/ViewsCSS/PurchaseDetails.css" />
-        <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Barlow+Condensed:400,700|Open+Sans:400,700|Oswald:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
-    </head>
-    <body>
-        <h2>Details</h2>
+<head>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+    <link type="text/css" rel="stylesheet" href="../../Content/ViewsCSS/PurchaseDetails.css" />
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2|Barlow+Condensed:400,700|Open+Sans:400,700|Oswald:400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+</head>
+<body>
+    <h2>Details</h2>
 
-        <div>
-            <hr />
-            <h3>Purchase</h3>
-            <div class="div-dl">
-                <dl class="dl">
-                    <dt>
-                        @Html.DisplayNameFor(model => model.FirstName):
-                    </dt>
+    <div>
+        <hr />
+        <h3>Purchase</h3>
+        <div class="div-dl">
+            <dl class="dl">
+                <dt>
+                    @Html.DisplayNameFor(model => model.FirstName):
+                </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.FirstName)
-                    </dd>
-                    <hr />
-                    <dt>
-                        @Html.DisplayNameFor(model => model.LastName):
-                    </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.FirstName)
+                </dd>
+                <hr />
+                <dt>
+                    @Html.DisplayNameFor(model => model.LastName):
+                </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.LastName)
-                    </dd>
-                    <hr />
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Phone):
-                    </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.LastName)
+                </dd>
+                <hr />
+                <dt>
+                    @Html.DisplayNameFor(model => model.Phone):
+                </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Phone)
-                    </dd>
-                    <hr />
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Email):
-                    </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Phone)
+                </dd>
+                <hr />
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email):
+                </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Email)
-                    </dd>
-                    <hr />
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Date):
-                    </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+                <hr />
+                <dt>
+                    @Html.DisplayNameFor(model => model.Date):
+                </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.Date)
-                    </dd>
-                    <hr />
-                    <dt>
-                        @Html.DisplayNameFor(model => model.BrandId):
-                    </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Date)
+                </dd>
+                <hr />
+                <dt>
+                    Brand:
+                </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.BrandId)
-                    </dd>
-                    <hr />
-                    <dt>
-                        @Html.DisplayNameFor(model => model.CarTypeId):
-                    </dt>
+                <dd>
+                    @brandRepository.GetBrandName(Model.BrandId)
+                </dd>
+                <hr />
+                <dt>
+                    Type:
+                </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.CarTypeId)
-                    </dd>
-                    <hr />
-                    <dt>
-                        @Html.DisplayNameFor(model => model.CarModelId):
-                    </dt>
+                <dd>
+                    @carTypeRepository.GetCarTypeName(Model.CarTypeId)
+                </dd>
+                <hr />
+                <dt>
+                    Model:
+                </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.CarModelId)
-                    </dd>
-                    <hr />
-                    <dt>
-                        @Html.DisplayNameFor(model => model.ConfigId):
-                    </dt>
+                <dd>
+                    @carModelRepository.GetCarModelName(Model.CarModelId)
+                </dd>
+                <hr />
+                <dt>
+                    Configuration:
+                </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.ConfigId)
-                    </dd>
-                    <hr />
-                    <dt>
-                        @Html.DisplayNameFor(model => model.CarColorId):
-                    </dt>
+                <dd>
+                    @configRepository.GetConfigName(Model.ConfigId)
+                </dd>
+                <hr />
+                <dt>
+                    Color:
+                </dt>
 
-                    <dd>
-                        @Html.DisplayFor(model => model.CarColorId)
-                    </dd>
-                    <hr />
-                    <dt>
-                        @Html.DisplayNameFor(model => model.Price):
-                    </dt>
+                <dd>
+                    @carColorRepository.GetCarColorName(Model.CarColorId)
+                </dd>
+                <hr />
+                <dt>
+                    @Html.DisplayNameFor(model => model.Price):
+                </dt>
 
-                    <dd>
-                        $@Html.DisplayFor(model => model.Price)
-                    </dd>
-                    <hr />
-                </dl>
-            </div>
+                <dd>
+                    $@Html.DisplayFor(model => model.Price)
+                </dd>
+                <hr />
+            </dl>
         </div>
-        <p>
-            <div class="btn-div">
-                @Html.ActionLink("Ok", "Index", "Home") |
-                @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
-            </div>    
-        </p>
+    </div>
+    <p>
+        <div class="btn-div">
+            @Html.ActionLink("Ok", "Index", "Home") |
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+        </div>
+    </p>
 
-    </body>
+</body>

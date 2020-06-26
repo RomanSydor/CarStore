@@ -24,6 +24,13 @@ namespace CarStore.Repositories
             return result.ToList();
         }
 
+        public string GetConfigName(int id) 
+        {
+            var config = Details(id);
+            var configName = config.Name;
+            return configName;
+        }
+
         protected void Dispose(bool disposing)
         {
             if (disposing)
